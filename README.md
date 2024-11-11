@@ -34,3 +34,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Export to HTML CSS
+
+    run `npm run build` when you want to export to static HTML CSS.
+
+    you can see file `index.html` in folder `out`. And file `.css` in `out/_next/static/css`.
+
+    Check out our [Next.js static export documentation](https://nextjs.org/docs/pages/building-your-application/deploying/static-exports) for more details.
