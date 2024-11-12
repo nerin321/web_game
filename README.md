@@ -37,8 +37,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Export to HTML CSS
 
-    run `npm run build` when you want to export to static HTML CSS.
+run `npm run build` when you want to export to static HTML CSS.
 
-    you can see file `index.html` in folder `out`. And file `.css` in `out/_next/static/css`.
+you can see file `index.html` in folder `out`. And file `.css` in `out/_next/static/css`.
 
-    Check out our [Next.js static export documentation](https://nextjs.org/docs/pages/building-your-application/deploying/static-exports) for more details.
+Check out our [Next.js static export documentation](https://nextjs.org/docs/pages/building-your-application/deploying/static-exports) for more details.
