@@ -14,6 +14,19 @@ const config: Config = {
         primary: "#183d6d",
         secondry: "#f15a24",
       },
+      keyframes: {
+        shake: {
+          "0%": { transform: "rotate(0deg)" },
+          "25%": { transform: "rotate(5deg)" },
+          "50%": { transform: "rotate(-5deg)" },
+          "75%": { transform: "rotate(5deg)" },
+          "100%": { transform: "rotate(0deg)" },
+          "99%": { transform: "rotate(0deg)" },
+        },
+      },
+      animation: {
+        shake: "shake 0.3s ease-in-out infinite",
+      },
     },
   },
   plugins: [require("@tailwindcss/line-clamp")],
