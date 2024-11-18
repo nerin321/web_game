@@ -1,14 +1,19 @@
 "use client";
+import Rating from "@/components/common/rating/Rating";
 import SlideShow from "@/components/common/slideShow/SlideShow";
 import LinkButton from "@/components/game/linkButton/LinkButton";
 import VideoTab from "@/components/game/videoTAB/VideoTab";
+import CommentSection from "@/components/common/comment/CommentSection";
 import {
   faBars,
+  faBookmark,
+  faBug,
   faCalendarDays,
   faCircleCheck,
   faCircleInfo,
   faClipboard,
   faFile,
+  faGamepad,
   faGem,
   faImage,
   faNewspaper,
@@ -16,10 +21,13 @@ import {
   faTag,
   faTriangleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
+import { faFacebookF, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { EmblaOptionsType } from "embla-carousel";
 import React, { useState } from "react";
+import GameUpdate from "@/components/home/gameNewRight/GameUpdate";
+import AccountInfo from "@/components/account/AccountInfo";
 
 const gameDetail = {
   name: "Japanese Rail Sim Hakone Town of Natural BHS Việt Hóa",
@@ -63,6 +71,135 @@ const imgs = [
   "https://images.unsplash.com/photo-1626686707291-7bda5c45e8a8",
 ];
 
+const bugList = [
+  "Hướng dẫn cài đặt việt hóa của Daominhha.net và Dixgames.com",
+  "Hướng dẫn tải Google drive bị giới hạn tải 24h thành công 100%",
+  "Tổng hợp những lỗi về LINK VIP & cách khắc phục",
+  "Hướng dẫn khắc phục lỗi Full 100% Disk trên Windows 8, 10",
+  "Lỗi ngôn ngữ Tiếng Việt khi cài đặt, giải nén chơi Game",
+  "Hướng dẫn khắc phục và sửa lỗi VCOMP120.dll",
+  "Hướng dẫn khắc phục và sửa lỗi X3DAudio1_7.dll",
+  "Hướng dẫn sửa lỗi d3dx9_43.dll trên Windows 10, 8 và 7",
+  "Khắc phục lỗi thiếu file VCRUNTIME140.DLL trong Windows",
+  "Hướng dẫn sửa lỗi xinput1_3.dll trên Windows 10, 8 và 7",
+  "Hướng dẫn Locale Emulator giả lập Locale Nhật Bổn để chơi Game JAP",
+  "Cách Fix lỗi “CANNOT WRITE IN GAME FOLDER” Trên Windows 10",
+  "Tổng hợp các Lỗi Game trên Windows 7 và 10",
+  "Hướng dẫn sửa lỗi 0xc000007b Trong Windows 10, 8 và 7",
+  "Hướng dẫn sử dụng AIO RUNTIMES – Cài Đặt Tự Động Các Thành Phần Hỗ Trợ Game",
+  "Tổng hợp những phần mềm cần thiết để chơi Game",
+  "7 Cách đơn giản Khắc phục lỗi ISDone.DLL / UnARC.DLL trên Windows 7/10",
+  "Hướng dẫn refresh link tải Game cho Internet Download Manager (IDM) và EagleGet",
+  "Hướng dẫn Mount ổ đĩa Ảo và Cài đặt Game từ file ISO",
+  "Hướng dẫn khắc phục lỗi msvcr100.dll",
+];
+
+const userInfo = {
+  userName: "User 1",
+  avatar:
+    "https://i.pinimg.com/736x/bd/2e/0c/bd2e0c554128568300f3de254b6fbb73.jpg",
+};
+
+const historyUpdate = [
+  {
+    date: "29/09/2024",
+    title: "File Việt Hóa - Việt Hóa Daominhha.net",
+  },
+  {
+    date: "29/09/2024",
+    title: "File Việt Hóa - Việt Hóa Daominhha.net",
+  },
+];
+
+const tabList = {
+  games: [
+    {
+      id: "app",
+      name: "Phần Mềm Mới",
+      featured: [
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+      ],
+    },
+    {
+      id: "new",
+      name: "Game Mới",
+      featured: [
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+      ],
+    },
+  ],
+};
+
 const OPTIONS: EmblaOptionsType = { loop: true };
 const SLIDE_COUNT = 5;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
@@ -70,11 +207,11 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 export default function Page() {
   const [isExpand, setIsExpand] = useState(true);
   return (
-    <main className="text-primary py-5 text-sm">
+    <main className="py-5">
       <h1 className=" text-3xl font-bold">
         tải game {gameDetail.name} - PC download full
       </h1>
-      <article className="grid grid-cols-3 py-6">
+      <article className="grid grid-cols-3 py-6 gap-6 relative">
         <section className=" col-span-2 space-y-6">
           <div>
             <div
@@ -686,8 +823,66 @@ export default function Page() {
               </div>
             </div>
           </div>
+          <div className="bg-white rounded-lg p-4 space-y-6">
+            <h2 className="text-xl font-bold flex items-center gap-2.5">
+              <FontAwesomeIcon icon={faBug} className="size-8" />
+              {""}
+              Các Lỗi Thường Gặp {gameDetail.name}
+            </h2>
+            <ul className="list-disc ml-5">
+              {bugList.map((item, index) => (
+                <li key={index}>
+                  <a href="" className="hover:text-secondry">
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <Rating />
+          </div>
+          <div>
+            <CommentSection />
+          </div>
         </section>
-        <section></section>
+        <section className="space-y-7 sticky top-0 h-fit">
+          <AccountInfo name={userInfo.userName} avatar={userInfo.avatar} />
+          <div className="bg-white rounded-md overflow-hidden">
+            <h4 className="text-white text-center text-lg font-bold bg-primary">
+              Lịch sử cập nhật game <br />
+              <span className="text-secondry">{gameDetail.name}</span>
+            </h4>
+            <div className="p-4 divide-y divide-primary">
+              {historyUpdate.map((history, index) => (
+                <div key={index} className="flex items-center gap-3 py-3">
+                  <div className="flex items-center gap-1">
+                    <FontAwesomeIcon icon={faCalendarDays} className="size-5" />{" "}
+                    <p>{history.date}</p>
+                  </div>
+                  <p className="text-secondry">{history.title}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <GameUpdate tabList={tabList} />
+          </div>
+          <div className="bg-white rounded-md p-4">
+            <h3 className="uppercase text-xl font-bold pb-6">
+              <span className="text-secondry">mua game</span> bản quyền
+            </h3>
+            <div className="space-y-7">
+              <p>
+                Nếu thấy game {gameDetail.name} hay thì nhớ mua bản quyền game
+                ủng hộ nhà phát triển các bạn nhé
+              </p>
+              <button className="uppercase font-semibold py-3 px-5 text-white rounded bg-secondry hover:bg-primary">
+                Click vào đây để mua bản quyền
+              </button>
+            </div>
+          </div>
+        </section>
       </article>
     </main>
   );

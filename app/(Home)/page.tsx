@@ -267,6 +267,95 @@ const imgs = [
   "https://images.unsplash.com/photo-1626686707291-7bda5c45e8a8",
 ];
 
+const tabList = {
+  games: [
+    {
+      id: "version",
+      name: "Update version&dlc",
+      featured: [
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+      ],
+    },
+    {
+      id: "mod",
+      name: "update mod mới",
+      featured: [
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+        {
+          name: "Homeworld 3 Việt hóa",
+          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          link: "#",
+          date: "11/11/2024",
+        },
+      ],
+    },
+  ],
+};
+
 export default function Home() {
   const [isExpand, setIsExpand] = useState(false);
   return (
@@ -393,7 +482,7 @@ export default function Home() {
             </div>
           </div>
           <div className="relative mb-6" id="span-title">
-            <span className="w-fit text-primary flex items-center gap-1 px-5 ml-8 text-2xl font-bold uppercase bg-gray-200">
+            <span className="w-fit  flex items-center gap-1 px-5 ml-8 text-2xl font-bold uppercase bg-gray-200">
               Thủ thuật <p className="text-[#f15a24]">mới nhất</p>
             </span>
           </div>
@@ -412,7 +501,7 @@ export default function Home() {
         </section>
         <section className="space-y-7">
           <UpcomingGame />
-          <GameUpdate />
+          <GameUpdate tabList={tabList} />
         </section>
       </article>
       <div className=" p-4 mt-8 font-medium bg-white border-l-4 border-orange-600 rounded">

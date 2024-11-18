@@ -258,7 +258,7 @@ const page = () => {
         id="span"
         className="relative flex items-center justify-between my-6"
       >
-        <span className="text-primary pr-5 text-2xl font-bold capitalize bg-gray-200">
+        <span className=" pr-5 text-2xl font-bold capitalize bg-gray-200">
           Games Việt Hóa
         </span>
       </div>
@@ -266,9 +266,7 @@ const page = () => {
         <div className="gap-x-6 gap-y-2 grid w-full grid-cols-4">
           {filterCategory.map((filter, index) => (
             <div key={index} className="flex items-center justify-between">
-              <span className="text-primary text-sm font-semibold">
-                {filter.category}
-              </span>
+              <span className=" text-sm font-semibold">{filter.category}</span>
               <select
                 name={filter.id}
                 onChange={handleChange}

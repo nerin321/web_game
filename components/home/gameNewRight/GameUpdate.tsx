@@ -2,95 +2,29 @@ import { faCalendarDays } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import React, { Fragment } from "react";
-const tabList = {
-  games: [
-    {
-      id: "version",
-      name: "Update version&dlc",
-      featured: [
-        {
-          name: "Homeworld 3 Việt hóa",
-          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
-          link: "#",
-          date: "11/11/2024",
-        },
-        {
-          name: "Homeworld 3 Việt hóa",
-          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
-          link: "#",
-          date: "11/11/2024",
-        },
-        {
-          name: "Homeworld 3 Việt hóa",
-          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
-          link: "#",
-          date: "11/11/2024",
-        },
-        {
-          name: "Homeworld 3 Việt hóa",
-          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
-          link: "#",
-          date: "11/11/2024",
-        },
-        {
-          name: "Homeworld 3 Việt hóa",
-          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
-          link: "#",
-          date: "11/11/2024",
-        },
-        {
-          name: "Homeworld 3 Việt hóa",
-          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
-          link: "#",
-          date: "11/11/2024",
-        },
-      ],
-    },
-    {
-      id: "mod",
-      name: "update mod mới",
-      featured: [
-        {
-          name: "Homeworld 3 Việt hóa",
-          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
-          link: "#",
-          date: "11/11/2024",
-        },
-        {
-          name: "Homeworld 3 Việt hóa",
-          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
-          link: "#",
-          date: "11/11/2024",
-        },
-        {
-          name: "Homeworld 3 Việt hóa",
-          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
-          link: "#",
-          date: "11/11/2024",
-        },
-        {
-          name: "Homeworld 3 Việt hóa",
-          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
-          link: "#",
-          date: "11/11/2024",
-        },
-        {
-          name: "Homeworld 3 Việt hóa",
-          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
-          link: "#",
-          date: "11/11/2024",
-        },
-        {
-          name: "Homeworld 3 Việt hóa",
-          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
-          link: "#",
-          date: "11/11/2024",
-        },
-      ],
-    },
-  ],
-};
-const GameUpdate = () => {
+
+interface FeaturedGame {
+  name: string;
+  img: string;
+  link: string;
+  date: string;
+}
+
+interface GameTab {
+  id: string;
+  name: string;
+  featured: FeaturedGame[];
+}
+
+interface TabList {
+  games: GameTab[];
+}
+
+interface GameUpdateProps {
+  tabList: TabList; // Nhận tabList như một prop
+}
+
+const GameUpdate: React.FC<GameUpdateProps> = ({ tabList }) => {
   return (
     <div className="border rounded-lg overflow-hidden">
       <TabGroup>

@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="w-[90%] mx-auto py-5 bg-gray-200">
+      <body className="w-[90%] mx-auto py-5 bg-gray-200 text-primary">
         <Header />
         {children}
         <Footer />

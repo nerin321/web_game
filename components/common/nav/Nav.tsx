@@ -133,7 +133,7 @@ export default function Nav() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 "
           >
             <span className="sr-only">Open main menu</span>
             <FontAwesomeIcon icon={faBars} />
@@ -142,12 +142,12 @@ export default function Nav() {
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <a
             href="#"
-            className="text-sm/6 font-bold text-gray-900 uppercase hover:text-orange-700"
+            className="text-sm/6 font-bold  uppercase hover:text-secondry"
           >
             Game tải nhiều
           </a>
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-bold text-gray-900 uppercase hover:text-orange-700">
+            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-bold  uppercase hover:text-secondry">
               Game +
             </PopoverButton>
 
@@ -170,30 +170,30 @@ export default function Nav() {
 
           <a
             href="#"
-            className="text-sm/6 font-bold text-gray-900 uppercase hover:text-orange-700"
+            className="text-sm/6 font-bold  uppercase hover:text-secondry"
           >
             Game việt hóa
           </a>
           <a
             href="#"
-            className="text-sm/6 font-bold text-gray-900 uppercase hover:text-orange-700"
+            className="text-sm/6 font-bold  uppercase hover:text-secondry"
           >
             Phần mềm
           </a>
           <a
             href="#"
-            className="text-sm/6 font-bold text-gray-900 uppercase hover:text-orange-700"
+            className="text-sm/6 font-bold  uppercase hover:text-secondry"
           >
             Nạp tải vip
           </a>
           <a
             href="#"
-            className="text-sm/6 font-bold text-gray-900 uppercase hover:text-orange-700"
+            className="text-sm/6 font-bold  uppercase hover:text-secondry"
           >
             Nhiệm vụ
           </a>
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-bold text-gray-900 uppercase hover:text-orange-700">
+            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-bold  uppercase hover:text-secondry">
               Blog +
             </PopoverButton>
 
@@ -227,7 +227,7 @@ export default function Nav() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              className="-m-2.5 rounded-md p-2.5 "
             >
               <span className="sr-only">Close menu</span>
               <FontAwesomeIcon icon={faX} className="text-white" />
@@ -238,12 +238,12 @@ export default function Nav() {
               <div className="divide-y">
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-6 py-2 text-base/7 font-semibold uppercase text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-6 py-2 text-base/7 font-semibold uppercase  hover:bg-gray-50"
                 >
                   Game tải nhiều
                 </a>
                 <Disclosure as="div" className="-mx-3">
-                  <div className="flex items-center justify-between px-6 text-base/7 font-semibold text-gray-900 uppercase">
+                  <div className="flex items-center justify-between px-6 text-base/7 font-semibold  uppercase">
                     <span>Game</span>
                     <DisclosureButton className="group flex items-center justify-center py-3 px-10 border-l">
                       +
@@ -265,30 +265,30 @@ export default function Nav() {
                 </Disclosure>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-6 py-2 text-base/7 font-semibold uppercase text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-6 py-2 text-base/7 font-semibold uppercase  hover:bg-gray-50"
                 >
                   Game việt hóa
                 </a>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-6 py-2 text-base/7 font-semibold uppercase text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-6 py-2 text-base/7 font-semibold uppercase  hover:bg-gray-50"
                 >
                   phần mềm
                 </a>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-6 py-2 text-base/7 font-semibold uppercase text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-6 py-2 text-base/7 font-semibold uppercase  hover:bg-gray-50"
                 >
                   nạp tải vip
                 </a>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-6 py-2 text-base/7 font-semibold uppercase text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-6 py-2 text-base/7 font-semibold uppercase  hover:bg-gray-50"
                 >
                   nhiệm vụ
                 </a>
                 <Disclosure as="div" className="-mx-3">
-                  <div className="flex items-center justify-between px-6 text-base/7 font-semibold text-gray-900 uppercase">
+                  <div className="flex items-center justify-between px-6 text-base/7 font-semibold  uppercase">
                     <span>Blogs</span>
                     <DisclosureButton className="group flex items-center justify-center py-3 px-10 border-l">
                       +

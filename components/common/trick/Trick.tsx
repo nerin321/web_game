@@ -9,7 +9,7 @@ const Trick: React.FC<TrickProps> = ({ img, name, link }) => {
   return (
     <div className="text-primary">
       <img src={img} alt="" className="rounded-md w-full object-cover" />
-      <a href={link} className="text-xl font-bold">
+      <a href={link} className="font-bold">
         {name}
       </a>
     </div>

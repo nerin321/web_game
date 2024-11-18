@@ -17,10 +17,10 @@ const Header = () => {
   return (
     <div>
       <div className="lg:flex items-center justify-between">
-        <div className="flex items-center justify-center text-sm font-medium text-gray-700">
+        <div className="flex items-center justify-center text-sm font-medium">
           <FontAwesomeIcon icon={faHeart} className="size-4 text-red-600" />
           <p>
-            <a href="#" className="font-bold text-red-600 uppercase">
+            <a href="#" className="font-bold text-secondry uppercase">
               Donate{" "}
             </a>
             tải tốc độ cao chỉ 1000 donate/1game
@@ -46,7 +46,7 @@ const Header = () => {
                 setIsLight(true);
               }}
               className={`${
-                isLight ? "bg-white text-orange-600" : "bg-none text-gray-700"
+                isLight ? "bg-white text-secondry" : "bg-none text-gray-700"
               } rounded-full flex items-center justify-center p-1`}
             >
               <FontAwesomeIcon icon={faSun} className="size-5 " />
