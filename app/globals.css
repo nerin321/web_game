@@ -98,3 +98,39 @@ body {
 .embla__dot--selected:after {
   box-shadow: inset 0 0 0 0.2rem var(--text-body);
 }
+
+.custom-ol {
+  counter-reset: section;
+}
+
+.custom-ol > li {
+  counter-increment: section;
+}
+
+.custom-ol > li::before {
+  content: counters(section, ".") " ";
+  color: inherit; /* Kế thừa màu chữ từ mục chính */
+}
+
+.custom-ol > li > .nested-ol {
+  counter-reset: section;
+}
+
+.custom-ol > li > .nested-ol > li {
+  counter-increment: section;
+}
+
+.custom-ol > li > .nested-ol > li::before {
+  content: counters(section, ".") " ";
+  color: inherit; /* Kế thừa màu chữ từ mục chính */
+}
+
+.custom-ol > li:hover::before,
+.custom-ol > li:hover > a {
+  color: #f15a24; /* Tailwind's blue-600 */
+}
+
+.nested-ol > li:hover::before,
+.nested-ol > li:hover > a {
+  color: #f15a24; /* Tailwind's blue-600 */
+}
