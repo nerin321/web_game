@@ -262,8 +262,8 @@ const page = () => {
           Games Việt Hóa
         </span>
       </div>
-      <div className="px-7 flex items-center w-full py-4 bg-white gap-2.5">
-        <div className="gap-x-6 gap-y-2 grid w-full grid-cols-4">
+      <div className="px-7 lg:flex items-center w-full py-4 bg-white gap-2.5">
+        <div className="gap-x-6 gap-y-2 grid w-full lg:grid-cols-4">
           {filterCategory.map((filter, index) => (
             <div key={index} className="flex items-center justify-between">
               <span className=" text-sm font-semibold">{filter.category}</span>
@@ -271,7 +271,7 @@ const page = () => {
                 name={filter.id}
                 onChange={handleChange}
                 value={filters[filter.id as keyof Filters]}
-                className="border py-1.5 px-2.5 rounded-md text-sm w-[150px] appearance-none"
+                className="border py-1.5 px-2.5 rounded-md text-sm w-[264px] lg:w-[150px] appearance-none"
               >
                 {filter.options.map((option, index) => (
                   <option key={index} value={option} className="">
@@ -282,12 +282,12 @@ const page = () => {
             </div>
           ))}
         </div>
-        <button className="px-10 py-2.5 block bg-secondry uppercase w-fit text-white text-sm font-semibold rounded-md hover:bg-primary">
+        <button className="px-10 py-2.5 mt-4 block bg-secondry uppercase w-full lg:w-fit text-white text-sm font-semibold rounded-md hover:bg-primary">
           Lọc
         </button>
       </div>
       <section className="my-6">
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid lg:grid-cols-4 gap-6">
           {gameInfo.map((game, index) => (
             <Games
               img={game.img}
