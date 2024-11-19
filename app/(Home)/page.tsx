@@ -362,7 +362,7 @@ export default function Home() {
     <div className=" py-4">
       <section>
         <SlideShow slides={SLIDES} options={OPTIONS} imgs={imgs} />
-        <div className="grid grid-cols-3 gap-3 py-4">
+        <div className="hidden lg:grid grid-cols-3 gap-3 py-4">
           {headerGames.map((item, index) => (
             <div key={index} className="flex items-center gap-10 bg-white">
               <img src={item.img} alt="" className="h-28" />
@@ -383,8 +383,8 @@ export default function Home() {
       </section>
       <section className="my-5">
         <HeaderSpan title="Hot" />
-        <div className="grid grid-cols-2 gap-5 overflow-hidden">
-          <div className="rounded-xl bg-white h-[560px]">
+        <div className="grid lg:grid-cols-2 gap-5 overflow-hidden">
+          <div className="rounded-xl bg-white max-h-[560px]">
             <img src={gameHots[0].img} alt="" className="rounded-xl w-full" />
             <div className="px-6 text-blue-700">
               <a
@@ -417,7 +417,7 @@ export default function Home() {
                       >
                         {item.name}
                       </a>
-                      <p className="truncate w-[490px] text-[#183d6d]">
+                      <p className="truncate w-[290px] lg:w-[490px] text-[#183d6d]">
                         {item.desc}
                       </p>
                     </div>
@@ -430,7 +430,7 @@ export default function Home() {
       </section>
       <section className="py-10">
         <HeaderSpan title="Update version" more link="#" color />
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid lg:grid-cols-4 gap-6">
           {gameInfo.map((game, index) => (
             <Games
               img={game.img}
@@ -447,7 +447,7 @@ export default function Home() {
       </section>
       <section className="py-10">
         <HeaderSpan title="update việt hóa" more link="#" color />
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid lg:grid-cols-4 gap-6">
           {gameInfo.map((game, index) => (
             <Games
               img={game.img}
@@ -462,11 +462,11 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <article className="grid grid-cols-3 gap-6 py-10">
-        <section className="col-span-2">
+      <article className="grid lg:grid-cols-3 gap-6 py-10">
+        <section className="lg:col-span-2">
           <HeaderSpan title="Sắp phát hành" more link="#" color />
           <div className="py-8">
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid lg:grid-cols-3 gap-6">
               {gameInfo.map((game, index) => (
                 <Games
                   img={game.img}
@@ -487,7 +487,7 @@ export default function Home() {
             </span>
           </div>
           <div className="py-8">
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
               {tricks.map((trick, index) => (
                 <Trick
                   img={trick.img}

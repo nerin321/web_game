@@ -20,9 +20,9 @@ const HeaderSpan: React.FC<HeaderSpanProps> = ({
       className="relative flex items-center justify-between mb-6"
       id={`${color ? "span" : "span-title"}`}
     >
-      <span className="text-2xl font-bold px-5 text-[#f15a24] flex items-center bg-gray-200 gap-1 ml-8 uppercase">
-        Games <p className="text-primary">{title}</p>
-      </span>
+      <p className="text-2xl font-bold px-5 bg-gray-200 ml-8 uppercase inline-block">
+        <span className="text-secondry">Games</span> {title}
+      </p>
       {more ? (
         <a
           href={link}

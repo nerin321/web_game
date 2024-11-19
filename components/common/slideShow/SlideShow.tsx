@@ -27,13 +27,13 @@ const SlideShow: React.FC<PropType> = (props) => {
   return (
     <div className="relative">
       <div ref={emblaRef} className="overflow-hidden">
-        <div className="flex items-center h-[400px]">
+        <div className="flex items-center">
           {props.imgs.map((item, index) => (
             <img
               src={item}
               key={index}
               alt=""
-              className="basis-full flex-grow flex-shrink-0 object-cover"
+              className="basis-full flex-grow flex-shrink-0 object-cover h-[145px] lg:h-[400px]"
             />
           ))}
         </div>

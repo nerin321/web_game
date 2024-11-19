@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <section className="border-secondry text-primary pt-14 grid grid-cols-3 gap-6 pb-4 mt-12 border-t-4">
+    <section className="border-secondry text-primary pt-14 grid lg:grid-cols-3 gap-6 pb-4 mt-12 border-t-4">
       <div className="space-y-6">
         <div className="flex items-center gap-1">
           <img
