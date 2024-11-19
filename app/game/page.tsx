@@ -6,14 +6,12 @@ import VideoTab from "@/components/game/videoTAB/VideoTab";
 import CommentSection from "@/components/common/comment/CommentSection";
 import {
   faBars,
-  faBookmark,
   faBug,
   faCalendarDays,
   faCircleCheck,
   faCircleInfo,
   faClipboard,
   faFile,
-  faGamepad,
   faGem,
   faImage,
   faNewspaper,
@@ -21,7 +19,6 @@ import {
   faTag,
   faTriangleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
-import { faFacebookF, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { EmblaOptionsType } from "embla-carousel";
@@ -211,35 +208,39 @@ export default function Page() {
       <h1 className=" text-3xl font-bold">
         tải game {gameDetail.name} - PC download full
       </h1>
-      <article className="grid grid-cols-3 py-6 gap-6 relative">
-        <section className=" col-span-2 space-y-6">
+      <article className="block lg:grid lg:grid-cols-3 py-6 gap-6 lg:relative space-y-6 lg:space-y-0">
+        <section className="space-y-6 lg:col-span-2">
           <div>
             <div
               className="relative flex items-center justify-between mb-6"
-              id="span"
+              id="span-item"
             >
-              <div className=" pr-5 text-2xl font-bold uppercase bg-gray-200 w-[610px] flex items-center gap-1.5">
+              <div className=" lg:pr-5 text-2xl font-bold bg-gray-200 w-[400px] lg:w-[610px] flex items-center gap-1.5">
                 <FontAwesomeIcon icon={faImage} className="size-6" />
                 <p className="truncate">
-                  ảnh game {gameDetail.name} - PC download full
+                  <span className="uppercase">ảnh game</span> {gameDetail.name}{" "}
+                  - PC download full
                 </p>
               </div>
             </div>
-            <div>
-              <SlideShow slides={SLIDES} options={OPTIONS} imgs={imgs} />
-            </div>
+            <SlideShow
+              slides={SLIDES}
+              options={OPTIONS}
+              imgs={imgs}
+              button={false}
+            />
           </div>
           <div>
             <div
               className="relative flex items-center justify-between mb-6"
-              id="span"
+              id="span-item"
             >
-              <div className="pr-5 text-2xl font-bold bg-gray-200 w-[610px] flex items-center gap-1.5">
+              <div className="lg:pr-5 text-2xl font-bold bg-gray-200 w-[420px] lg:w-[610px] flex items-center gap-1.5">
                 <FontAwesomeIcon icon={faCircleInfo} className="size-6" />
                 <p className="truncate">Chi tiết game {gameDetail.name}</p>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid gap-5">
               <ul className="rounded-xl border-primary p-4 space-y-3 bg-white border">
                 <li className="flex items-center gap-2">
                   <FontAwesomeIcon icon={faNewspaper} className="size-5" />
@@ -411,12 +412,15 @@ export default function Page() {
           </div>
           <div>
             <div>
-              <h2 className="border-secondry flex items-end gap-3 text-base font-bold border-b-2">
-                <div className="px-2.5 pt-2 bg-secondry text-white w-fit">
-                  <FontAwesomeIcon icon={faGem} className="size-5" />
-                </div>
-                Giới thiệu game {gameDetail.name}
-              </h2>
+              <div className="flex items-end gap-3 border-b-2 border-secondry ">
+                <FontAwesomeIcon
+                  icon={faGem}
+                  className="size-5 px-2.5 pt-2 bg-secondry text-white"
+                />
+                <p className=" font-bold truncate w-[350px]">
+                  Giới thiệu game {gameDetail.name}
+                </p>
+              </div>
               <div className="space-y-7 my-7 ">
                 <p className="font-semibold">
                   Tải game {gameDetail.name} Việt Hóa miễn phí link Google Drive
@@ -463,13 +467,16 @@ export default function Page() {
               </div>
             </div>
             <div>
-              <h2 className="border-secondry flex items-end gap-3 text-base font-bold border-b-2">
-                <div className="px-2.5 pt-2 bg-secondry text-white w-fit">
-                  <FontAwesomeIcon icon={faGem} className="size-5" />
-                </div>
-                Hình ảnh game {gameDetail.name}
-              </h2>
-              <div className="p-7 space-y-2">
+              <div className="flex items-end gap-3 border-b-2 border-secondry ">
+                <FontAwesomeIcon
+                  icon={faGem}
+                  className="size-5 px-2.5 pt-2 bg-secondry text-white"
+                />
+                <p className=" font-bold truncate w-[350px]">
+                  Hình ảnh game {gameDetail.name}
+                </p>
+              </div>
+              <div className="lg:px-7 py-7 space-y-2">
                 {gameDetail.gameImgs.map((img, index) => (
                   <div key={index}>
                     <img src={img} alt="" className="object-cover w-full" />
@@ -478,12 +485,15 @@ export default function Page() {
               </div>
             </div>
             <div className="space-y-7">
-              <h2 className="border-secondry flex items-end gap-3 text-base font-bold border-b-2">
-                <div className="px-2.5 pt-2 bg-secondry text-white w-fit">
-                  <FontAwesomeIcon icon={faGem} className="size-5" />
-                </div>
-                Quy trình cài đặt Game từ A-Z
-              </h2>
+              <div className="flex items-end gap-3 border-b-2 border-secondry ">
+                <FontAwesomeIcon
+                  icon={faGem}
+                  className="size-5 px-2.5 pt-2 bg-secondry text-white"
+                />
+                <p className=" font-bold truncate w-[350px]">
+                  Quy trình cài đặt Game từ A-Z
+                </p>
+              </div>
               <div>
                 <div className="mb-4 space-y-6">
                   <p>
@@ -545,109 +555,115 @@ export default function Page() {
                 </div>
               </div>
             </div>
-            <div className="my-7 space-y-7">
-              <h2 className="border-secondry flex items-end gap-3 text-base font-bold border-b-2">
-                <div className="px-2.5 pt-2 bg-secondry text-white w-fit">
-                  <FontAwesomeIcon icon={faGem} className="size-5" />
-                </div>
+          </div>
+          <div className="my-7 space-y-7">
+            <div className="flex items-end gap-3 border-b-2 border-secondry ">
+              <FontAwesomeIcon
+                icon={faGem}
+                className="size-5 px-2.5 pt-2 bg-secondry text-white"
+              />
+              <p className=" font-bold truncate w-[350px]">
                 Hướng dẫn cài đặt Game {gameDetail.name}
-              </h2>
-              <div className="space-y-7">
-                <strong className="text-secondry">
-                  LƯU Ý: Tắt Diệt Virus Đúng Cách Trước Khi Tải Và Cài Đặt Game
-                </strong>
-                <ol className="ml-10 list-disc">
-                  <li>
-                    Tải full Part file game về máy tính, bỏ vào chung 1 thư mục.
-                  </li>
-                  <li>
-                    Sau đó giải nén toàn bộ tệp tin bằng Winrar{" "}
-                    <span className="text-secondry font-semibold">
-                      *đọc kỹ bảng lưu ý pass bên dưới link tải.
-                    </span>
-                  </li>
-                  <li>
-                    Sau khi giải nén, chạy file “
-                    <span className="text-secondry font-semibold">
-                      Japanese Rail Sim Hakone Town of Natural Beauty and Hot
-                      Springs.exe
-                    </span>
-                    ” bằng quyền “administrator” và chơi game.
-                  </li>
-                </ol>
-              </div>
+              </p>
             </div>
             <div className="space-y-7">
-              <h2 className="border-secondry flex items-end gap-3 text-base font-bold border-b-2">
-                <div className="px-2.5 pt-2 bg-secondry text-white w-fit">
-                  <FontAwesomeIcon icon={faGem} className="size-5" />
-                </div>
+              <strong className="text-secondry">
+                LƯU Ý: Tắt Diệt Virus Đúng Cách Trước Khi Tải Và Cài Đặt Game
+              </strong>
+              <ol className="ml-10 list-disc">
+                <li>
+                  Tải full Part file game về máy tính, bỏ vào chung 1 thư mục.
+                </li>
+                <li>
+                  Sau đó giải nén toàn bộ tệp tin bằng Winrar{" "}
+                  <span className="text-secondry font-semibold">
+                    *đọc kỹ bảng lưu ý pass bên dưới link tải.
+                  </span>
+                </li>
+                <li>
+                  Sau khi giải nén, chạy file “
+                  <span className="text-secondry font-semibold">
+                    Japanese Rail Sim Hakone Town of Natural Beauty and Hot
+                    Springs.exe
+                  </span>
+                  ” bằng quyền “administrator” và chơi game.
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div className="space-y-7">
+            <div className="flex items-end gap-3 border-b-2 border-secondry ">
+              <FontAwesomeIcon
+                icon={faGem}
+                className="size-5 px-2.5 pt-2 bg-secondry text-white"
+              />
+              <p className=" font-bold truncate w-[350px]">
                 Hướng dẫn cài đặt việt hóa {gameDetail.name} -Daominhha.net
-              </h2>
-              <div className="space-y-7">
-                <ol className="list-disc ml-10">
-                  <li>
-                    Tắt diệt virus, tải{" "}
-                    <span className="text-secondry font-semibold">
-                      File Việt Hóa – Daominhha.net
-                    </span>{" "}
-                    về máy và giải nén
-                  </li>
-                  <li>Copy toàn bộ file việt hóa paste vào folder game</li>
-                  <li>
-                    Các bạn nắm kéo file “
-                    <span className="text-secondry font-semibold">
-                      Japanese Rail Sim Hakone Town of Natural Beauty and Hot
-                      Springs.exe
-                    </span>
-                    ” (cái file mà để mấy bạn mở game lên chơi ấy) – thả vào cái
-                    file tên “
-                    <span className="text-secondry font-semibold">
-                      SetupReiPatcherAndAutoTranslator.exe
-                    </span>
-                    “.
-                  </li>
-                  <li>
-                    Lúc này nếu làm đúng sẽ có 1 bảng CMD màu đen hiện lên và
-                    kêu các bạn “
-                    <span className="text-secondry font-semibold">
-                      click any key to exit
-                    </span>
-                    “, lúc này bấm đại phím nào đó cũng được thì bảng CMD sẽ tắt
-                    xuống, đồng thời tạo thêm 1 file “
-                    <span className="text-secondry">Game.exe</span>” nữa nhưng
-                    có thêm dòng chữ “(
-                    <span className="text-secondry">Patch and Run</span>)”
-                  </li>
-                  <li>
-                    Lúc này các bạn chỉ việc chạy cái file “
-                    <span className="text-secondry font-semibold">
-                      TênGame(Patch and Run).exe
-                    </span>
-                    ” là game sẽ chơi được.
-                  </li>
-                </ol>
-                <p>
-                  LƯU Ý: Vì đây là tool auto dịch nên có thể vài game sẽ không
-                  thể hoạt động 100% vì dev có thể thay đổi 1 số file hệ thống
-                  làm tool ko hoạt động được, các bạn lưu ý giúp mình nha.
-                </p>
-                <p className="text-secondry font-semibold text-base">
-                  Lưu ý trước khi cài đặt việt hóa
-                </p>
-                <ol className="list-disc ml-10">
-                  <li>
-                    Việt hóa được thực hiện bởi{" "}
-                    <span className="text-secondry font-semibold">
-                      Daominhha.net
-                    </span>
-                  </li>
-                  <li>
-                    Đây là bản dịch bằng <strong>GOOGLE DỊCH</strong> – Bạn chơi
-                    tới đâu dịch tới đó , nên cần có internet để chơi game
-                  </li>
-                </ol>
-              </div>
+              </p>
+            </div>
+            <div className="space-y-7">
+              <ol className="list-disc ml-10">
+                <li>
+                  Tắt diệt virus, tải{" "}
+                  <span className="text-secondry font-semibold">
+                    File Việt Hóa – Daominhha.net
+                  </span>{" "}
+                  về máy và giải nén
+                </li>
+                <li>Copy toàn bộ file việt hóa paste vào folder game</li>
+                <li>
+                  Các bạn nắm kéo file “
+                  <span className="text-secondry font-semibold">
+                    Japanese Rail Sim Hakone Town of Natural Beauty and Hot
+                    Springs.exe
+                  </span>
+                  ” (cái file mà để mấy bạn mở game lên chơi ấy) – thả vào cái
+                  file tên “
+                  <span className="text-secondry font-semibold">
+                    SetupReiPatcherAndAutoTranslator.exe
+                  </span>
+                  “.
+                </li>
+                <li>
+                  Lúc này nếu làm đúng sẽ có 1 bảng CMD màu đen hiện lên và kêu
+                  các bạn “
+                  <span className="text-secondry font-semibold">
+                    click any key to exit
+                  </span>
+                  “, lúc này bấm đại phím nào đó cũng được thì bảng CMD sẽ tắt
+                  xuống, đồng thời tạo thêm 1 file “
+                  <span className="text-secondry">Game.exe</span>” nữa nhưng có
+                  thêm dòng chữ “(
+                  <span className="text-secondry">Patch and Run</span>)”
+                </li>
+                <li>
+                  Lúc này các bạn chỉ việc chạy cái file “
+                  <span className="text-secondry font-semibold">
+                    TênGame(Patch and Run).exe
+                  </span>
+                  ” là game sẽ chơi được.
+                </li>
+              </ol>
+              <p>
+                LƯU Ý: Vì đây là tool auto dịch nên có thể vài game sẽ không thể
+                hoạt động 100% vì dev có thể thay đổi 1 số file hệ thống làm
+                tool ko hoạt động được, các bạn lưu ý giúp mình nha.
+              </p>
+              <p className="text-secondry font-semibold text-base">
+                Lưu ý trước khi cài đặt việt hóa
+              </p>
+              <ol className="list-disc ml-10">
+                <li>
+                  Việt hóa được thực hiện bởi{" "}
+                  <span className="text-secondry font-semibold">
+                    Daominhha.net
+                  </span>
+                </li>
+                <li>
+                  Đây là bản dịch bằng <strong>GOOGLE DỊCH</strong> – Bạn chơi
+                  tới đâu dịch tới đó , nên cần có internet để chơi game
+                </li>
+              </ol>
             </div>
           </div>
           <div className="border border-dashed p-2.5 my-2.5 border-primary rounded-md">
@@ -680,7 +696,7 @@ export default function Page() {
           <div>
             <VideoTab />
           </div>
-          <div className="p-4 bg-white rounded-lg space-y-6">
+          <div className="p-4 bg-white rounded-lg space-y-6 text-sm">
             <div className="relative z-10" id="span">
               <div className="text-xl font-bold bg-white w-fit pr-5">
                 <p>Link tải game {gameDetail.name}</p>
@@ -688,35 +704,35 @@ export default function Page() {
             </div>
             <div className="divide-y divide-dashed divide-primary">
               <div className="grid grid-cols-5 divide-x divide-dashed divide-primary">
-                <div className="col-span-2 uppercase pr-1.5 font-semibold">
+                <div className="lg:col-span-2 uppercase pr-1.5 font-semibold">
                   Video hướng dẫn cài đặt game {gameDetail.name}
                 </div>
                 <div className="flex items-center justify-center">
                   03/10/2024
                 </div>
-                <div className="col-span-2 flex items-center px-5 py-2.5">
+                <div className="col-span-3 lg:col-span-2 flex items-center px-5 py-2.5">
                   <LinkButton title="xem video hướng dẫn" icon link="#" />
                 </div>
               </div>
               <div className="grid grid-cols-5 divide-x divide-dashed divide-primary">
-                <div className="col-span-2 uppercase pr-1.5 font-semibold">
+                <div className="lg:col-span-2 uppercase pr-1.5 font-semibold">
                   Video hướng dẫn cài đặt Việt hóa game {gameDetail.name}
                 </div>
                 <div className="flex items-center justify-center">
                   03/10/2024
                 </div>
-                <div className="col-span-2 flex items-center px-5 py-2.5">
+                <div className="col-span-3 lg:col-span-2 flex items-center px-5 py-2.5">
                   <LinkButton title="xem video hướng dẫn" icon link="#" />
                 </div>
               </div>
               <div className="grid grid-cols-5 divide-x divide-dashed divide-primary">
-                <div className="col-span-2 pr-1.5 font-semibold">
+                <div className="lg:col-span-2 pr-1.5 font-semibold">
                   {gameDetail.name} (ID: 1741852779)
                 </div>
                 <div className="flex items-center justify-center">
                   03/10/2024
                 </div>
-                <div className="col-span-2 flex items-center px-5 py-2.5 gap-3">
+                <div className="col-span-3 lg:col-span-2 flex items-center px-5 py-2.5 gap-3">
                   <LinkButton title="part 1" link="#" />
                   <LinkButton title="part 2" link="#" />
                 </div>
@@ -846,7 +862,7 @@ export default function Page() {
             <CommentSection />
           </div>
         </section>
-        <section className="space-y-7 sticky top-0 h-fit">
+        <section className="space-y-7 lg:sticky lg:top-0 h-fit">
           <AccountInfo name={userInfo.userName} avatar={userInfo.avatar} />
           <div className="bg-white rounded-md overflow-hidden">
             <h4 className="text-white text-center text-lg font-bold bg-primary">

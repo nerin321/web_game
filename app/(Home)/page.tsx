@@ -361,7 +361,7 @@ export default function Home() {
   return (
     <div className=" py-4">
       <section>
-        <SlideShow slides={SLIDES} options={OPTIONS} imgs={imgs} />
+        <SlideShow slides={SLIDES} options={OPTIONS} imgs={imgs} button />
         <div className="hidden lg:grid grid-cols-3 gap-3 py-4">
           {headerGames.map((item, index) => (
             <div key={index} className="flex items-center gap-10 bg-white">

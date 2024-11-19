@@ -24,7 +24,7 @@ const VideoTab = () => {
 
   return (
     <div className="border bg-white rounded-lg overflow-hidden">
-      <div className="grid grid-cols-2   text-white">
+      <div className="grid grid-cols-2 text-xs text-white">
         <button
           onClick={() => setTab(true)}
           className={`py-2 uppercase font-semibold ${

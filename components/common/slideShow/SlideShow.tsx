@@ -13,6 +13,7 @@ type PropType = {
   slides: number[];
   options?: EmblaOptionsType;
   imgs: string[];
+  button?: boolean;
 };
 const SlideShow: React.FC<PropType> = (props) => {
   const { slides, options } = props;
@@ -38,18 +39,24 @@ const SlideShow: React.FC<PropType> = (props) => {
           ))}
         </div>
       </div>
-      <button
-        className="size-10 top-[45%] -left-5 hover:bg-orange-700/80 hover:text-white absolute z-10 flex items-center justify-center bg-white rounded-full"
-        onClick={scrollPrev}
-      >
-        <FontAwesomeIcon icon={faChevronLeft} className="size-5" />
-      </button>
-      <button
-        className="size-10 top-[45%] -right-5 hover:bg-orange-700/80 hover:text-white absolute z-10 flex items-center justify-center bg-white rounded-full"
-        onClick={scrollNext}
-      >
-        <FontAwesomeIcon icon={faChevronRight} className="size-5" />
-      </button>
+      {props.button ? (
+        <div>
+          <button
+            className="size-10 top-[45%] -left-5 hover:bg-orange-700/80 hover:text-white absolute z-10 flex items-center justify-center bg-white rounded-full"
+            onClick={scrollPrev}
+          >
+            <FontAwesomeIcon icon={faChevronLeft} className="size-5" />
+          </button>
+          <button
+            className="size-10 top-[45%] -right-5 hover:bg-orange-700/80 hover:text-white absolute z-10 flex items-center justify-center bg-white rounded-full"
+            onClick={scrollNext}
+          >
+            <FontAwesomeIcon icon={faChevronRight} className="size-5" />
+          </button>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

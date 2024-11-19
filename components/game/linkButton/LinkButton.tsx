@@ -12,7 +12,7 @@ const LinkButton: React.FC<Linkprops> = ({ title, icon, link }) => {
     <div className="relative">
       <a
         href={link}
-        className="flex items-center text-secondry font-semibold uppercase py-1.5 px-2.5 border border-secondry rounded gap-2"
+        className="flex items-center text-secondry font-semibold uppercase py-1.5 px-2.5 border border-secondry rounded gap-2 text-nowrap text-sm"
       >
         {icon ? (
           <FontAwesomeIcon

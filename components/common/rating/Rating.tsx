@@ -156,12 +156,12 @@ const Rating = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center py-4">
-        <div className="w-fit">
+      <div className="flex flex-wrap justify-center py-4">
+        <div className="lg:w-fit">
           <table>
             <tbody>
               {categories.map((category) => (
-                <tr key={category}>
+                <tr key={category} className="flex flex-wrap justify-end">
                   <td className="px-4 py-2">{category}</td>
                   {ratingOptions.map((option) => (
                     <td key={option} className="px-4 py-2 text-center">
