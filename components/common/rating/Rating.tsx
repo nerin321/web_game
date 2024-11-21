@@ -1,6 +1,6 @@
 import { faGamepad } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useState } from "react";
 
 const rateProps = {
   story: 80,
@@ -9,6 +9,14 @@ const rateProps = {
   sound: 80,
   all: 100,
   time: 1,
+};
+
+type Scores = {
+  story: number;
+  gamePlay: number;
+  graphic: number;
+  sound: number;
+  all: number;
 };
 
 const categories = ["Cốt truyện", "Đồ họa", "Gameplay", "Âm thanh", "Tổng thể"];
@@ -42,6 +50,32 @@ function ratingPoint() {
 }
 const Rating = () => {
   const offSet = 100 - ratingPoint().avg;
+  const [ratePoint, setRatePoint] = useState<Scores>({
+    story: 0,
+    gamePlay: 0,
+    graphic: 0,
+    sound: 0,
+    all: 0,
+  });
+
+  const PointChouse = (option: string, point: number) => {
+    setRatePoint((prev) => ({
+      ...prev,
+      [option]: point,
+    }));
+    console.log(ratePoint);
+  };
+
+  const resetAll = () => {
+    setRatePoint({
+      story: 0,
+      gamePlay: 0,
+      graphic: 0,
+      sound: 0,
+      all: 0,
+    });
+  };
+
   return (
     <div className="bg-white rounded-lg p-4 space-y-6">
       <h2 className="text-xl font-bold flex items-center gap-2.5">
@@ -166,8 +200,14 @@ const Rating = () => {
                   {ratingOptions.map((option) => (
                     <td key={option} className="px-4 py-2 text-center">
                       <button
-                        type="button"
-                        className={` transition-colors bg-black text-white rounded w-14 h-10 font-semibold hover:bg-primary`}
+                        className={`${
+                          ratePoint[category as keyof Scores] === option
+                            ? "bg-primary"
+                            : "bg-black"
+                        } transition-colors text-white rounded w-14 h-10 font-semibold hover:bg-primary`}
+                        onClick={() =>
+                          PointChouse(category as keyof Scores, option)
+                        }
                       >
                         {option}
                       </button>
@@ -177,7 +217,10 @@ const Rating = () => {
               ))}
             </tbody>
           </table>
-          <button className="font-semibold uppercase text-center py-2.5 bg-[#22a2b1] text-white w-full rounded hover:bg-blue-500">
+          <button
+            className="font-semibold uppercase text-center py-2.5 bg-[#22a2b1] text-white w-full rounded hover:bg-blue-500"
+            onClick={resetAll}
+          >
             Gửi đánh giá
           </button>
         </div>
