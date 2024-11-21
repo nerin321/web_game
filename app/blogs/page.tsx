@@ -2,13 +2,15 @@
 import Pagination from "@/components/common/pagination/Pagination";
 import Trick from "@/components/common/trick/Trick";
 import GameUpdate from "@/components/home/gameNewRight/GameUpdate";
+import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 
 const blogList = [
   {
     img: "https://i.pinimg.com/736x/ca/9f/f4/ca9ff4fb5e35a0d98dabca4ae7c7e1b2.jpg",
     name: "Cách khắc phục lỗi “RPC server is unavailable” trên máy tính",
-    link: "#",
+    link: "./blog-detail",
   },
   {
     img: "https://i.pinimg.com/736x/ca/9f/f4/ca9ff4fb5e35a0d98dabca4ae7c7e1b2.jpg",
@@ -178,7 +180,14 @@ const tabList = {
 const Page = () => {
   const [isExpand, setIsExpand] = useState(false);
   return (
-    <main>
+    <main className="py-3">
+      <p className="flex items-baseline gap-1">
+        <a href="/" className="text-secondry">
+          Trang chủ
+        </a>
+        <FontAwesomeIcon icon={faAnglesRight} className="size-3" />
+        <span>Blogs</span>
+      </p>
       <div
         id="span"
         className="relative flex items-center justify-between my-6"

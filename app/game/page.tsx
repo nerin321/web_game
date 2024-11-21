@@ -4,6 +4,7 @@ import SlideShow from "@/components/common/slideShow/SlideShow";
 import LinkButton from "@/components/game/linkButton/LinkButton";
 import VideoTab from "@/components/game/videoTAB/VideoTab";
 import {
+  faAnglesRight,
   faBars,
   faBug,
   faCalendarDays,
@@ -246,11 +247,22 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 export default function Page() {
   const [isExpand, setIsExpand] = useState(true);
   return (
-    <main className="py-5">
+    <main className="py-3 space-y-6">
+      <p className="flex items-baseline gap-1">
+        <a href="./" className="text-secondry">
+          Trang chủ
+        </a>
+        <FontAwesomeIcon icon={faAnglesRight} className="size-3" />
+        <a href="./category" className="text-secondry">
+          Game
+        </a>
+        <FontAwesomeIcon icon={faAnglesRight} className="size-3" />
+        <span>{gameDetail.name}</span>
+      </p>
       <h1 className=" text-3xl font-bold">
-        tải game {gameDetail.name} - PC download full
+        Tải game {gameDetail.name} - PC download full
       </h1>
-      <article className="block lg:grid lg:grid-cols-3 py-6 gap-6 lg:relative space-y-6 lg:space-y-0">
+      <article className="block lg:grid lg:grid-cols-3 gap-6 lg:relative space-y-6 lg:space-y-0">
         <section className="space-y-6 lg:col-span-2">
           <div>
             <div

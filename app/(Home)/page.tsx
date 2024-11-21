@@ -50,7 +50,7 @@ const gameHots = [
     img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/1551360/header.jpg?t=1730763397",
     name: "forza horizon 5",
     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque mollitia maxime quae minima modi nam vero quod veritatis quam, aliquid nostrum, omnis, porro qui nisi ullam! A nisi praesentium mollitia?",
-    link: "#",
+    link: "./game",
   },
   {
     img: "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2676380/capsule_616x353.jpg?t=1703991594",

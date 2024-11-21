@@ -96,7 +96,7 @@ const games = [
 const blogs = [
   {
     name: "Thủ thuật",
-    href: "#",
+    href: "./blogs",
   },
   {
     name: "TOP GAME",
@@ -169,7 +169,7 @@ export default function Nav() {
           </Popover>
 
           <a
-            href="#"
+            href="./category"
             className="text-sm/6 font-bold  uppercase hover:text-secondry"
           >
             Game việt hóa

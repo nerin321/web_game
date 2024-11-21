@@ -1,6 +1,8 @@
 "use client";
 
 import Games from "@/components/common/games/Games";
+import { faAnglesRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 
 const filterCategory = [
@@ -49,7 +51,7 @@ const filterCategory = [
 const gameInfo = [
   {
     img: "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2707490/3fcd62e99d47f8ff1a5f7ea19e25cd6bdd9a10c9/capsule_616x353.jpg?t=1729437625",
-    name: "tower factory",
+    name: "Japanese Rail Sim Hakone Town of Natural BHS Việt Hóa",
     tag: [
       { tagName: "Game", tagLink: "#" },
       { tagName: "Game 2D", tagLink: "#" },
@@ -61,7 +63,7 @@ const gameInfo = [
       { tagName: "Game mô phỏng", tagLink: "#" },
       { tagName: "Game xây dựng", tagLink: "#" },
     ],
-    dowloadLink: "#",
+    dowloadLink: "./game",
     rate: 84,
     update: { title: "game sắp ra mắt", dateUpdate: "06/11/2024" },
     video: true,
@@ -254,6 +256,13 @@ const page = () => {
 
   return (
     <main className="py-4">
+      <p className="flex items-baseline gap-1">
+        <a href="/" className="text-secondry">
+          Trang chủ
+        </a>
+        <FontAwesomeIcon icon={faAnglesRight} className="size-3" />
+        <span>Game Việt Hóa</span>
+      </p>
       <div
         id="span"
         className="relative flex items-center justify-between my-6"

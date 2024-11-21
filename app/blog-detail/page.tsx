@@ -3,6 +3,7 @@ import AccountInfo from "@/components/account/AccountInfo";
 import NewComment from "@/components/common/comment/NewComment";
 import GameUpdate from "@/components/home/gameNewRight/GameUpdate";
 import {
+  faAnglesRight,
   faArrowRight,
   faBars,
   faGem,
@@ -157,7 +158,16 @@ const comments = [
 const page = () => {
   const [isExpand, setIsExpand] = useState(true);
   return (
-    <main className="py-4 space-y-3">
+    <main className="py-3 space-y-3">
+      <div>
+        <p className="flex items-baseline gap-1">
+          <a href="/" className="text-secondry">
+            Trang chủ
+          </a>
+          <FontAwesomeIcon icon={faAnglesRight} className="size-3" />
+          <span>{blogDetailProps.title}</span>
+        </p>
+      </div>
       <h2 className="text-3xl font-bold">{blogDetailProps.title}</h2>
       <article className="block space-y-6 lg:space-y-0 lg:grid grid-cols-3 gap-6">
         <section className="col-span-2 space-y-7">
