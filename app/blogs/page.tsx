@@ -187,9 +187,9 @@ const Page = () => {
           Thủ thuật
         </span>
       </div>
-      <article className="grid grid-cols-3 relative gap-5">
+      <article className="block lg:grid lg:grid-cols-3 relative gap-5 space-y-5 lg:space-y-0">
         <section className="col-span-2 ">
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
             {blogList.map((blog, index) => (
               <Trick
                 img={blog.img}

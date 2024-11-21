@@ -97,11 +97,12 @@ const CommentSection: React.FC = () => {
     }
   };
   const handleReplySubmit = (commentId: number) => {
+    console.log(replyContent);
     if (replyContent.trim()) {
       const newReply = {
         id: Date.now(),
         userName: userInfo.userName,
-        avatar: userInfo.userName,
+        avatar: userInfo.avatar,
         content: replyContent,
         timestamp: new Date(),
       };
@@ -259,7 +260,7 @@ const CommentSection: React.FC = () => {
                           </p>
                         </span>
                       </div>
-                      <p>{c.content}</p>
+                      <p>{reply.content}</p>
                       <div className="flex items-center gap-10">
                         <div className="flex items-center gap-3">
                           <button onClick={() => updateCounter("like")}>

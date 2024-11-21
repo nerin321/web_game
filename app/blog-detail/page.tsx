@@ -1,6 +1,6 @@
 "use client";
 import AccountInfo from "@/components/account/AccountInfo";
-import CommentSection from "@/components/common/comment/CommentSection";
+import NewComment from "@/components/common/comment/NewComment";
 import GameUpdate from "@/components/home/gameNewRight/GameUpdate";
 import {
   faArrowRight,
@@ -112,12 +112,54 @@ const tabList = {
   ],
 };
 
+const comments = [
+  {
+    id: 1,
+    dateTime: new Date(),
+    userName: "John Doe",
+    avatar: "https://via.placeholder.com/150",
+    content: "This is a great post! Thanks for sharing.",
+    like: 5,
+    replies: [
+      {
+        id: 101,
+        dateTime: new Date(),
+        userName: "Jane Smith",
+        avatar: "https://via.placeholder.com/150",
+        content: "I completely agree!",
+        like: -1,
+        replies: [
+          {
+            id: 201,
+            dateTime: new Date(),
+            userName: "Mike Johnson",
+            avatar: "https://via.placeholder.com/150",
+            content: "Absolutely, well said!",
+            like: 5,
+            replies: [],
+          },
+        ],
+        replyTo: "John Doe",
+      },
+    ],
+  },
+  {
+    id: 2,
+    dateTime: new Date(),
+    userName: "Alice Johnson",
+    avatar: "https://via.placeholder.com/150",
+    content: "I learned so much from this. Thank you.",
+    like: 2,
+    replies: [],
+  },
+];
+
 const page = () => {
   const [isExpand, setIsExpand] = useState(true);
   return (
     <main className="py-4 space-y-3">
       <h2 className="text-3xl font-bold">{blogDetailProps.title}</h2>
-      <article className="grid grid-cols-3 gap-6">
+      <article className="block space-y-6 lg:space-y-0 lg:grid grid-cols-3 gap-6">
         <section className="col-span-2 space-y-7">
           <img
             src={blogDetailProps.img}
@@ -453,8 +495,13 @@ const page = () => {
             </p>
           </div>
 
-          <div>
-            <CommentSection />
+          <div className="mt-8 bg-white rounded-lg p-4 space-y-5">
+            <div className="relative z-10" id="span">
+              <div className="w-fit pr-5 text-xl font-bold uppercase bg-white">
+                <p>Bình luận</p>
+              </div>
+            </div>
+            <NewComment comments={comments} />
           </div>
         </section>
         <section className="space-y-6 sticky top-0 h-fit">

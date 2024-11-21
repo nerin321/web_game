@@ -3,7 +3,6 @@ import Rating from "@/components/common/rating/Rating";
 import SlideShow from "@/components/common/slideShow/SlideShow";
 import LinkButton from "@/components/game/linkButton/LinkButton";
 import VideoTab from "@/components/game/videoTAB/VideoTab";
-import CommentSection from "@/components/common/comment/CommentSection";
 import {
   faBars,
   faBug,
@@ -25,6 +24,7 @@ import { EmblaOptionsType } from "embla-carousel";
 import React, { useState } from "react";
 import GameUpdate from "@/components/home/gameNewRight/GameUpdate";
 import AccountInfo from "@/components/account/AccountInfo";
+import NewComment from "@/components/common/comment/NewComment";
 
 const gameDetail = {
   name: "Japanese Rail Sim Hakone Town of Natural BHS Việt Hóa",
@@ -196,6 +196,48 @@ const tabList = {
     },
   ],
 };
+
+const comments = [
+  {
+    id: 1,
+    dateTime: new Date(),
+    userName: "John Doe",
+    avatar: "https://via.placeholder.com/150",
+    content: "This is a great post! Thanks for sharing.",
+    like: 5,
+    replies: [
+      {
+        id: 101,
+        dateTime: new Date(),
+        userName: "Jane Smith",
+        avatar: "https://via.placeholder.com/150",
+        content: "I completely agree!",
+        like: -1,
+        replies: [
+          {
+            id: 201,
+            dateTime: new Date(),
+            userName: "Mike Johnson",
+            avatar: "https://via.placeholder.com/150",
+            content: "Absolutely, well said!",
+            like: 5,
+            replies: [],
+          },
+        ],
+        replyTo: "John Doe",
+      },
+    ],
+  },
+  {
+    id: 2,
+    dateTime: new Date(),
+    userName: "Alice Johnson",
+    avatar: "https://via.placeholder.com/150",
+    content: "I learned so much from this. Thank you.",
+    like: 2,
+    replies: [],
+  },
+];
 
 const OPTIONS: EmblaOptionsType = { loop: true };
 const SLIDE_COUNT = 5;
@@ -858,8 +900,13 @@ export default function Page() {
           <div>
             <Rating />
           </div>
-          <div>
-            <CommentSection />
+          <div className="mt-8 bg-white rounded-lg p-4 space-y-5">
+            <div className="relative z-10" id="span">
+              <div className="w-fit pr-5 text-xl font-bold uppercase bg-white">
+                <p>Bình luận</p>
+              </div>
+            </div>
+            <NewComment comments={comments} />
           </div>
         </section>
         <section className="space-y-7 lg:sticky lg:top-0 h-fit">
