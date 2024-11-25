@@ -294,7 +294,7 @@ export default function Page() {
                 <p className="truncate">Chi tiết game {gameDetail.name}</p>
               </div>
             </div>
-            <div className="grid gap-5">
+            <div className="lg:grid grid-cols-2 gap-5">
               <ul className="rounded-xl border-primary p-4 space-y-3 bg-white border">
                 <li className="flex items-center gap-2">
                   <FontAwesomeIcon icon={faNewspaper} className="size-5" />
@@ -471,7 +471,7 @@ export default function Page() {
                   icon={faGem}
                   className="size-5 px-2.5 pt-2 bg-secondry text-white"
                 />
-                <p className=" font-bold truncate w-[350px]">
+                <p className=" font-bold truncate w-[350px] lg:normal-case lg:w-full">
                   Giới thiệu game {gameDetail.name}
                 </p>
               </div>
@@ -526,7 +526,7 @@ export default function Page() {
                   icon={faGem}
                   className="size-5 px-2.5 pt-2 bg-secondry text-white"
                 />
-                <p className=" font-bold truncate w-[350px]">
+                <p className=" font-bold truncate w-[350px] lg:normal-case lg:w-full">
                   Hình ảnh game {gameDetail.name}
                 </p>
               </div>
@@ -544,7 +544,7 @@ export default function Page() {
                   icon={faGem}
                   className="size-5 px-2.5 pt-2 bg-secondry text-white"
                 />
-                <p className=" font-bold truncate w-[350px]">
+                <p className=" font-bold truncate w-[350px] lg:normal-case lg:w-full">
                   Quy trình cài đặt Game từ A-Z
                 </p>
               </div>
@@ -616,7 +616,7 @@ export default function Page() {
                 icon={faGem}
                 className="size-5 px-2.5 pt-2 bg-secondry text-white"
               />
-              <p className=" font-bold truncate w-[350px]">
+              <p className=" font-bold truncate w-[350px] lg:normal-case lg:w-full">
                 Hướng dẫn cài đặt Game {gameDetail.name}
               </p>
             </div>
@@ -651,7 +651,7 @@ export default function Page() {
                 icon={faGem}
                 className="size-5 px-2.5 pt-2 bg-secondry text-white"
               />
-              <p className=" font-bold truncate w-[350px]">
+              <p className=" font-bold truncate w-[350px] lg:normal-case lg:w-full">
                 Hướng dẫn cài đặt việt hóa {gameDetail.name} -Daominhha.net
               </p>
             </div>

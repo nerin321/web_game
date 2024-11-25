@@ -44,13 +44,12 @@ export default function FlyoutMenu() {
           {items.length}
         </p>
       </PopoverButton>
-
       <PopoverPanel
         transition
         className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
       >
-        <div className="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm/6 shadow-lg ring-1 ring-gray-900/5">
-          <div className="p-3 space-y-4">
+        <div className="w-screen max-w-md flex-auto overflow-hidden rounded bg-white text-sm/6 shadow-lg ring-1 ring-gray-900/5">
+          <div className="p-3">
             {items.map((item, index) => (
               <div
                 key={index}

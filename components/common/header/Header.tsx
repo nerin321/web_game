@@ -3,6 +3,7 @@ import React from "react";
 import FlyoutMenu from "@/components/common/flyoutMenu/FlyoutMenu";
 import Nav from "@/components/common/nav/Nav";
 import {
+  faCommentDots,
   faHeart,
   faMagnifyingGlass,
   faMoon,
@@ -11,6 +12,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
+import FlyoutMess from "../flyoutMenu/flyoutMess";
 
 const Header = () => {
   const [isLight, setIsLight] = useState(true);
@@ -63,7 +65,7 @@ const Header = () => {
             </button>
           </div>
           <div className="flex items-center gap-3">
-            <FlyoutMenu />
+            <FlyoutMess />
             <FlyoutMenu />
             <a href="#" className="text-xs font-bold uppercase">
               Đăng ký Đăng nhập

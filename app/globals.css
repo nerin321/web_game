@@ -156,3 +156,44 @@ body {
 .nested-ol > li:hover > a {
   color: #f15a24; /* Tailwind's blue-600 */
 }
+
+.hover-animation {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.hover-animation:hover::before {
+  animation: shine 0.5s ease-out none;
+}
+
+.hover-animation::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+  z-index: 2;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}

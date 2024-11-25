@@ -52,7 +52,13 @@ const UpcomingGame = () => {
           <div key={index} className="py-2.5">
             {index === 0 ? (
               <div className="pt-5 pb-2.5">
-                <img src={game.img} alt="" className="w-full rounded-lg" />
+                <div className="rounded-lg hover-animation group">
+                  <img
+                    src={game.img}
+                    alt=""
+                    className=" object-cover group-hover:scale-105 transition-all"
+                  />
+                </div>
                 <a
                   href={game.link}
                   className="text-sm font-bold text-primary text-center block pt-2"
@@ -62,11 +68,13 @@ const UpcomingGame = () => {
               </div>
             ) : (
               <div key={index} className="pt-5 pb-2.5 flex items-center gap-4">
-                <img
-                  src={game.img}
-                  alt=""
-                  className="w-[90px] h-[50px] object-cover rounded-lg"
-                />
+                <div className="w-[90px] h-[50px] rounded-lg hover-animation group">
+                  <img
+                    src={game.img}
+                    alt=""
+                    className=" object-cover group-hover:scale-105 transition-all"
+                  />
+                </div>
                 <div className="text-primary">
                   <a href={game.link} className="block text-sm font-bold mb-3">
                     {game.name}

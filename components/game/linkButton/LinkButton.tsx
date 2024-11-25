@@ -12,12 +12,12 @@ const LinkButton: React.FC<Linkprops> = ({ title, icon, link }) => {
     <div className="relative">
       <a
         href={link}
-        className="flex items-center text-secondry font-semibold uppercase py-1.5 px-2.5 border border-secondry rounded gap-2 text-nowrap text-sm"
+        className="flex items-center text-secondry font-semibold uppercase py-1.5 px-2.5 border border-secondry rounded gap-2 text-nowrap text-sm hover:bg-primary"
       >
         {icon ? (
           <FontAwesomeIcon
             icon={faCirclePlay}
-            className="size-5 text-primary"
+            className="size-5 text-primary hover:text-white"
           />
         ) : (
           ""

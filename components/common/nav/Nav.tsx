@@ -159,7 +159,7 @@ export default function Nav() {
                 {games.map((item) => (
                   <div
                     key={item.name}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 uppercase hover:bg-gray-50"
+                    className="group relative flex items-center gap-x-6 rounded-lg px-4 font-semibold text-sm/6 uppercase hover:bg-gray-50"
                   >
                     <a href={item.href}>{item.name}</a>
                   </div>
@@ -205,7 +205,7 @@ export default function Nav() {
                 {blogs.map((item) => (
                   <div
                     key={item.name}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 uppercase hover:bg-gray-50"
+                    className="group relative flex items-center gap-x-6 rounded-lg px-4 font-semibold text-sm/6 uppercase hover:bg-gray-50"
                   >
                     <a href={item.href}>{item.name}</a>
                   </div>

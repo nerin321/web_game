@@ -40,7 +40,13 @@ const Games: React.FC<GameInfo> = ({
   return (
     <div>
       <div className="relative">
-        <img src={img} alt="" className="rounded-xl" />
+        <div className=" rounded-xl hover-animation group">
+          <img
+            src={img}
+            alt=""
+            className="group-hover:scale-105 transition-all"
+          />
+        </div>
         <div className="absolute top-3">
           <span className="text-white font-semibold text-xs bg-green-500 rounded-e-lg px-2 py-1 flex items-center gap-2 mb-0.5 uppercase">
             <FontAwesomeIcon icon={faBell} className="size-4 text-white" />
@@ -59,7 +65,7 @@ const Games: React.FC<GameInfo> = ({
         )}
       </div>
       <div>
-        <a href={dowloadLink} className="text-xl font-bold">
+        <a href={dowloadLink} className="text-xl font-bold truncate block">
           {name}
         </a>
         <div className="space-x-1 line-clamp-2 py-1">
