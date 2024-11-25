@@ -275,7 +275,7 @@ const tabList = {
       featured: [
         {
           name: "Homeworld 3 Việt hóa",
-          img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+          img: "https://i.pinimg.com/736x/7e/b7/b7/7eb7b7afca6bbc224d8e9c0f94e56a86.jpg",
           link: "#",
           date: "11/11/2024",
         },
@@ -362,14 +362,14 @@ export default function Home() {
     <div className=" py-4">
       <section>
         <SlideShow slides={SLIDES} options={OPTIONS} imgs={imgs} button />
-        <div className="hidden lg:grid grid-cols-3 gap-3 py-4">
+        <div className="lg:grid hidden grid-cols-3 gap-3 py-4">
           {headerGames.map((item, index) => (
             <div key={index} className="flex items-center gap-10 bg-white">
               <img src={item.img} alt="" className="h-28" />
               <div>
                 <a
                   href={item.link}
-                  className="block text-lg font-bold text-blue-800 uppercase"
+                  className="hover:text-secondry block text-lg font-bold text-blue-800 uppercase"
                 >
                   {item.name}
                 </a>
@@ -383,9 +383,15 @@ export default function Home() {
       </section>
       <section className="my-5">
         <HeaderSpan title="Hot" />
-        <div className="grid lg:grid-cols-2 gap-5 overflow-hidden">
+        <div className="lg:grid-cols-2 grid gap-5 overflow-hidden">
           <div className="rounded-xl bg-white max-h-[560px]">
-            <img src={gameHots[0].img} alt="" className="rounded-xl w-full" />
+            <div className="rounded-xl hover-animation group ">
+              <img
+                src={gameHots[0].img}
+                alt=""
+                className="group-hover:scale-105 object-cover w-full transition-all"
+              />
+            </div>
             <div className="px-6 text-blue-700">
               <a
                 href={gameHots[0].link}
@@ -409,15 +415,18 @@ export default function Home() {
                   ""
                 ) : (
                   <div className="rounded-xl flex items-center gap-5 p-3 bg-white border">
-                    <img src={item.img} alt="" className="h-9 w-16" />
+                    <div className="hover-animation group">
+                      <img
+                        src={item.img}
+                        alt=""
+                        className="group-hover:scale-105 object-cover h-full transition-all"
+                      />
+                    </div>
                     <div>
-                      <a
-                        href={item.link}
-                        className="text-xl font-bold text-[#183d6d] hover:text-orange-600"
-                      >
+                      <a href={item.link} className="text-xl font-bold">
                         {item.name}
                       </a>
-                      <p className="truncate w-[290px] lg:w-[490px] text-[#183d6d]">
+                      <p className="truncate w-[290px] lg:w-[490px]">
                         {item.desc}
                       </p>
                     </div>
@@ -430,7 +439,7 @@ export default function Home() {
       </section>
       <section className="py-10">
         <HeaderSpan title="Update version" more link="#" color />
-        <div className="grid lg:grid-cols-4 gap-6">
+        <div className="lg:grid-cols-4 grid gap-6">
           {gameInfo.map((game, index) => (
             <Games
               img={game.img}
@@ -447,7 +456,7 @@ export default function Home() {
       </section>
       <section className="py-10">
         <HeaderSpan title="update việt hóa" more link="#" color />
-        <div className="grid lg:grid-cols-4 gap-6">
+        <div className="lg:grid-cols-4 grid gap-6">
           {gameInfo.map((game, index) => (
             <Games
               img={game.img}
@@ -462,11 +471,11 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <article className="grid lg:grid-cols-3 gap-6 py-10">
+      <article className="lg:grid-cols-3 grid gap-6 py-10">
         <section className="lg:col-span-2">
           <HeaderSpan title="Sắp phát hành" more link="#" color />
           <div className="py-8">
-            <div className="grid lg:grid-cols-3 gap-6">
+            <div className="lg:grid-cols-3 grid gap-6">
               {gameInfo.map((game, index) => (
                 <Games
                   img={game.img}
@@ -482,12 +491,12 @@ export default function Home() {
             </div>
           </div>
           <div className="relative mb-6" id="span-title">
-            <span className="w-fit  flex items-center gap-1 px-5 ml-8 text-2xl font-bold uppercase bg-gray-200">
+            <span className="w-fit flex items-center gap-1 px-5 ml-8 text-2xl font-bold uppercase bg-gray-200">
               Thủ thuật <p className="text-[#f15a24]">mới nhất</p>
             </span>
           </div>
           <div className="py-8">
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="lg:grid-cols-3 grid grid-cols-2 gap-6">
               {tricks.map((trick, index) => (
                 <Trick
                   img={trick.img}

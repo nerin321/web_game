@@ -8,14 +8,14 @@ interface TrickProps {
 const Trick: React.FC<TrickProps> = ({ img, name, link }) => {
   return (
     <div className="text-primary">
-      <div className=" rounded-md hover-animation group">
+      <div className=" hover-animation group rounded-md">
         <img
           src={img}
           alt=""
-          className="object-cover group-hover:scale-105 transition-all"
+          className="group-hover:scale-105 object-cover transition-all"
         />
       </div>
-      <a href={link} className="font-bold">
+      <a href={link} className="hover:text-secondry font-bold">
         {name}
       </a>
     </div>

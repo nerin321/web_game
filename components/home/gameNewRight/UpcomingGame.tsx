@@ -5,37 +5,37 @@ import React from "react";
 const gamesNew = [
   {
     name: "Homeworld 3 Việt hóa",
-    img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+    img: "https://i.pinimg.com/736x/7e/b7/b7/7eb7b7afca6bbc224d8e9c0f94e56a86.jpg",
     link: "#",
     date: "11/11/2024",
   },
   {
     name: "Homeworld 3 Việt hóa",
-    img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+    img: "https://i.pinimg.com/736x/7e/b7/b7/7eb7b7afca6bbc224d8e9c0f94e56a86.jpg",
     link: "#",
     date: "11/11/2024",
   },
   {
     name: "Homeworld 3 Việt hóa",
-    img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+    img: "https://i.pinimg.com/736x/7e/b7/b7/7eb7b7afca6bbc224d8e9c0f94e56a86.jpg",
     link: "#",
     date: "11/11/2024",
   },
   {
     name: "Homeworld 3 Việt hóa",
-    img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+    img: "https://i.pinimg.com/736x/7e/b7/b7/7eb7b7afca6bbc224d8e9c0f94e56a86.jpg",
     link: "#",
     date: "11/11/2024",
   },
   {
     name: "Homeworld 3 Việt hóa",
-    img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+    img: "https://i.pinimg.com/736x/7e/b7/b7/7eb7b7afca6bbc224d8e9c0f94e56a86.jpg",
     link: "#",
     date: "11/11/2024",
   },
   {
     name: "Homeworld 3 Việt hóa",
-    img: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840080/header.jpg?t=1729879364",
+    img: "https://i.pinimg.com/736x/7e/b7/b7/7eb7b7afca6bbc224d8e9c0f94e56a86.jpg",
     link: "#",
     date: "11/11/2024",
   },
@@ -44,24 +44,24 @@ const gamesNew = [
 const UpcomingGame = () => {
   return (
     <div className="rounded-xl overflow-hidden">
-      <h4 className="text-xl bg-primary text-white font-bold py-3 text-center w-full">
+      <h4 className="bg-primary w-full py-3 text-xl font-bold text-center text-white">
         Game sắp phát hành
       </h4>
-      <div className="p-4 bg-white  divide-y divide-black">
+      <div className="p-4 bg-white divide-y divide-black">
         {gamesNew.map((game, index) => (
           <div key={index} className="py-2.5">
             {index === 0 ? (
               <div className="pt-5 pb-2.5">
-                <div className="rounded-lg hover-animation group">
+                <div className="hover-animation group rounded-lg">
                   <img
                     src={game.img}
                     alt=""
-                    className=" object-cover group-hover:scale-105 transition-all"
+                    className="group-hover:scale-105 object-cover transition-all"
                   />
                 </div>
                 <a
                   href={game.link}
-                  className="text-sm font-bold text-primary text-center block pt-2"
+                  className="hover:text-secondry block pt-2 text-sm font-bold text-center"
                 >
                   {game.name}
                 </a>
@@ -72,11 +72,14 @@ const UpcomingGame = () => {
                   <img
                     src={game.img}
                     alt=""
-                    className=" object-cover group-hover:scale-105 transition-all"
+                    className=" group-hover:scale-105 object-cover transition-all"
                   />
                 </div>
-                <div className="text-primary">
-                  <a href={game.link} className="block text-sm font-bold mb-3">
+                <div>
+                  <a
+                    href={game.link}
+                    className="hover:text-secondry block mb-3 text-sm font-bold"
+                  >
                     {game.name}
                   </a>
                   <span className="flex items-center gap-1 text-[13px]">

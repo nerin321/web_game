@@ -169,13 +169,16 @@ const page = () => {
         </p>
       </div>
       <h2 className="text-3xl font-bold">{blogDetailProps.title}</h2>
-      <article className="block space-y-6 lg:space-y-0 lg:grid grid-cols-3 gap-6">
-        <section className="col-span-2 space-y-7">
-          <img
-            src={blogDetailProps.img}
-            alt=""
-            className="w-full object-cover rounded-lg"
-          />
+      <article className="lg:space-y-0 lg:grid block grid-cols-3 gap-6 space-y-6">
+        <section className="space-y-7 col-span-2">
+          <div className="hover-animation">
+            <img
+              src={blogDetailProps.img}
+              alt=""
+              className="object-cover w-full rounded-lg"
+            />
+          </div>
+          {/* nội dung bài */}
           <div>
             <div
               className="relative flex items-center justify-between mb-6"
@@ -436,7 +439,7 @@ const page = () => {
                   hoặc do nhà mạng đã tiến hành chặn truy cập tới máy chủ của
                   Steam
                 </p>
-                <strong className="text-center block text-secondry py-5">
+                <strong className="text-secondry block py-5 text-center">
                   VIDEO HƯỚNG DẪN CHI TIẾT
                 </strong>
                 <video controls className="w-full">
@@ -460,7 +463,7 @@ const page = () => {
                 sai” hoặc “có lỗi xảy ra trong quá trình đăng nhập” … Thì các
                 bạn cần kiểm tra những thứ sau đây:
               </p>
-              <ul className="list-disc pl-7">
+              <ul className="pl-7 list-disc">
                 <li>
                   Kiểm tra lại toàn bộ thông tin: Tài khoản, Mật khẩu Steam khi
                   đăng nhập.
@@ -505,7 +508,7 @@ const page = () => {
             </p>
           </div>
 
-          <div className="mt-8 bg-white rounded-lg p-4 space-y-5">
+          <div className="p-4 mt-8 space-y-5 bg-white rounded-lg">
             <div className="relative z-10" id="span">
               <div className="w-fit pr-5 text-xl font-bold uppercase bg-white">
                 <p>Bình luận</p>
@@ -514,7 +517,7 @@ const page = () => {
             <NewComment comments={comments} />
           </div>
         </section>
-        <section className="space-y-6 sticky top-0 h-fit">
+        <section className="h-fit sticky top-0 space-y-6">
           <AccountInfo name={userInfo.userName} avatar={userInfo.avatar} />
           <GameUpdate tabList={tabList} />
         </section>

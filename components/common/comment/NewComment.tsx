@@ -60,8 +60,8 @@ const NewComment: React.FC<CommentProps> = ({ comments }) => {
     const newComment: Comment = {
       id: Date.now(),
       dateTime: new Date(),
-      userName: "Current User",
-      avatar: "https://via.placeholder.com/150",
+      userName: userInfo.userName,
+      avatar: userInfo.avatar,
       content: newCommentContent.trim(),
       like: 0,
       replies: [],
@@ -114,8 +114,8 @@ const NewComment: React.FC<CommentProps> = ({ comments }) => {
     const newReply: Reply = {
       id: Date.now(),
       dateTime: new Date(),
-      userName: "Current User",
-      avatar: "https://via.placeholder.com/150",
+      userName: userInfo.userName,
+      avatar: userInfo.avatar,
       content: replyContent.trim(),
       like: 0,
       replies: [],
@@ -213,7 +213,7 @@ const NewComment: React.FC<CommentProps> = ({ comments }) => {
           <img
             src={userInfo.avatar}
             alt={`${userInfo.userName}'s avatar`}
-            className="w-12 h-12 rounded-full object-cover"
+            className="object-cover w-12 h-12 rounded-full"
           />
           <textarea
             className="w-full h-[100px] p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -224,7 +224,7 @@ const NewComment: React.FC<CommentProps> = ({ comments }) => {
         </div>
         <div className="flex justify-end">
           <button
-            className="mt-2 px-4 py-2 bg-secondry text-white rounded-md hover:bg-secondry/80"
+            className="bg-secondry hover:bg-secondry/80 px-4 py-2 mt-2 text-white rounded-md"
             onClick={handleNewCommentSubmit}
           >
             Đăng bình luận
@@ -233,7 +233,7 @@ const NewComment: React.FC<CommentProps> = ({ comments }) => {
       </div>
 
       <div>
-        <div className="border-b-2 border-gray-300 flex items-center justify-between ">
+        <div className=" flex items-center justify-between border-b-2 border-gray-300">
           <h3 className="uppercase font-semibold py-1.5 border-b-2 border-secondry w-fit -mb-0.5">
             {countAllComments(comments)} Bình luận
           </h3>
@@ -303,34 +303,34 @@ const CommentItem: React.FC<CommentItemProps> = ({
         <img
           src={comment.avatar}
           alt={`${comment.userName}'s avatar`}
-          className="w-12 h-12 rounded-full object-cover"
+          className="object-cover w-12 h-12 rounded-full"
         />
         <div>
           <div className="flex items-center space-x-2">
-            <h4 className="font-bold text-secondry">{comment.userName}</h4>
+            <h4 className="text-secondry font-bold">{comment.userName}</h4>
             <span className="text-sm text-gray-500">
               {formatDate(comment.dateTime)}
             </span>
           </div>
           <p className="mt-1">{comment.content}</p>
-          <div className="text-sm text-gray-500 flex items-center space-x-4">
+          <div className="flex items-center space-x-4 text-sm text-gray-500">
             <button
               onClick={() => onLike(comment.id, true)}
-              className="text-blue-500 font-medium hover:underline"
+              className="hover:underline font-medium text-blue-500"
             >
               <FontAwesomeIcon icon={faThumbsUp} className="size-4" />
             </button>
             <p>{comment.like}</p>
             <button
               onClick={() => onLike(comment.id, false)}
-              className="text-red-500 font-medium hover:underline"
+              className="hover:underline font-medium text-red-500"
             >
               <FontAwesomeIcon icon={faThumbsDown} className="size-4" />
             </button>
             {/* Nút trả lời */}
             <button
               onClick={handleReplyClick}
-              className="text-gray-500 font-medium hover:underline "
+              className="hover:underline font-medium text-gray-500"
             >
               {showReplyInput ? "Cancel" : "Reply"}
             </button>
@@ -340,12 +340,12 @@ const CommentItem: React.FC<CommentItemProps> = ({
 
       {/* Reply Input */}
       {showReplyInput && (
-        <div className="ml-12 mt-4 space-y-3">
+        <div className="mt-4 ml-12 space-y-3">
           <div className="flex items-start gap-2">
             <img
               src={userInfo.avatar}
               alt={`${userInfo.userName}'s avatar`}
-              className="w-12 h-12 rounded-full object-cover"
+              className="object-cover w-12 h-12 rounded-full"
             />
             <textarea
               value={replyContent}
@@ -361,7 +361,7 @@ const CommentItem: React.FC<CommentItemProps> = ({
                 setReplyContent("");
                 setShowReplyInput(false); // Ẩn ô nhập khi gửi
               }}
-              className="px-4 py-2 bg-secondry text-white rounded-md hover:bg-secondry/80"
+              className="bg-secondry hover:bg-secondry/80 px-4 py-2 text-white rounded-md"
             >
               Đăng bình luận
             </button>
@@ -370,7 +370,7 @@ const CommentItem: React.FC<CommentItemProps> = ({
       )}
 
       {/* Nested Replies */}
-      <div className="ml-12 mt-4 space-y-4">
+      <div className="mt-4 ml-12 space-y-4">
         {comment.replies.map((reply) => (
           <CommentItem
             key={reply.id}

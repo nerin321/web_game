@@ -47,28 +47,31 @@ const Games: React.FC<GameInfo> = ({
             className="group-hover:scale-105 transition-all"
           />
         </div>
-        <div className="absolute top-3">
+        <div className="top-3 absolute">
           <span className="text-white font-semibold text-xs bg-green-500 rounded-e-lg px-2 py-1 flex items-center gap-2 mb-0.5 uppercase">
             <FontAwesomeIcon icon={faBell} className="size-4 text-white" />
             {update.title}
           </span>
-          <p className="text-white font-semibold text-xs bg-blue-500 rounded-e-lg px-2 py-1 flex items-center gap-2 w-fit">
+          <p className="rounded-e-lg w-fit flex items-center gap-2 px-2 py-1 text-xs font-semibold text-white bg-blue-500">
             Update: {update.dateUpdate}
           </p>
         </div>
         {video ? (
           ""
         ) : (
-          <div className="size-7 flex items-center justify-center absolute -top-3 right-2 bg-red-700 rounded-full">
+          <div className="size-7 -top-3 right-2 absolute flex items-center justify-center bg-red-700 rounded-full">
             <FontAwesomeIcon icon={faPlay} className="size-4 pl-1 text-white" />
           </div>
         )}
       </div>
       <div>
-        <a href={dowloadLink} className="text-xl font-bold truncate block">
+        <a
+          href={dowloadLink}
+          className="hover:text-secondry block text-xl font-bold truncate"
+        >
           {name}
         </a>
-        <div className="space-x-1 line-clamp-2 py-1">
+        <div className="line-clamp-2 py-1 space-x-1">
           <FontAwesomeIcon icon={faTag} className="size-4" />
           {tag.map((tag, index) => (
             <a href={tag.tagLink} key={index}>
@@ -77,8 +80,8 @@ const Games: React.FC<GameInfo> = ({
           ))}
         </div>
         <div className="grid grid-cols-2 gap-3">
-          <button className="bg-black px-4 py-2 rounded">
-            <a href={dowloadLink} className="text-white uppercase">
+          <button className="hover:bg-secondry flex items-center px-4 py-2 bg-black rounded">
+            <a href={dowloadLink} className="block text-white uppercase">
               <FontAwesomeIcon
                 icon={faDownload}
                 className="size-6 text-white"
@@ -86,7 +89,7 @@ const Games: React.FC<GameInfo> = ({
               Tải game
             </a>
           </button>
-          <div className="flex items-center justify-center gap-3 text-xs font-semibold bg-black px-4 py-2 text-white rounded">
+          <div className="flex items-center justify-center gap-3 px-4 py-2 text-xs font-semibold text-white bg-black rounded">
             <FontAwesomeIcon icon={faStar} className="size-6 text-yellow-500" />
             <p>{rate}/100 điểm</p>
           </div>

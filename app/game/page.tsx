@@ -262,8 +262,8 @@ export default function Page() {
       <h1 className=" text-3xl font-bold">
         Tải game {gameDetail.name} - PC download full
       </h1>
-      <article className="block lg:grid lg:grid-cols-3 gap-6 lg:relative space-y-6 lg:space-y-0">
-        <section className="space-y-6 lg:col-span-2">
+      <article className="lg:grid lg:grid-cols-3 lg:relative lg:space-y-0 block gap-6 space-y-6">
+        <section className="lg:col-span-2 space-y-6">
           <div>
             <div
               className="relative flex items-center justify-between mb-6"
@@ -466,7 +466,7 @@ export default function Page() {
           </div>
           <div>
             <div>
-              <div className="flex items-end gap-3 border-b-2 border-secondry ">
+              <div className="border-secondry flex items-end gap-3 border-b-2">
                 <FontAwesomeIcon
                   icon={faGem}
                   className="size-5 px-2.5 pt-2 bg-secondry text-white"
@@ -521,7 +521,7 @@ export default function Page() {
               </div>
             </div>
             <div>
-              <div className="flex items-end gap-3 border-b-2 border-secondry ">
+              <div className="border-secondry flex items-end gap-3 border-b-2">
                 <FontAwesomeIcon
                   icon={faGem}
                   className="size-5 px-2.5 pt-2 bg-secondry text-white"
@@ -539,7 +539,7 @@ export default function Page() {
               </div>
             </div>
             <div className="space-y-7">
-              <div className="flex items-end gap-3 border-b-2 border-secondry ">
+              <div className="border-secondry flex items-end gap-3 border-b-2">
                 <FontAwesomeIcon
                   icon={faGem}
                   className="size-5 px-2.5 pt-2 bg-secondry text-white"
@@ -611,7 +611,7 @@ export default function Page() {
             </div>
           </div>
           <div className="my-7 space-y-7">
-            <div className="flex items-end gap-3 border-b-2 border-secondry ">
+            <div className="border-secondry flex items-end gap-3 border-b-2">
               <FontAwesomeIcon
                 icon={faGem}
                 className="size-5 px-2.5 pt-2 bg-secondry text-white"
@@ -646,7 +646,7 @@ export default function Page() {
             </div>
           </div>
           <div className="space-y-7">
-            <div className="flex items-end gap-3 border-b-2 border-secondry ">
+            <div className="border-secondry flex items-end gap-3 border-b-2">
               <FontAwesomeIcon
                 icon={faGem}
                 className="size-5 px-2.5 pt-2 bg-secondry text-white"
@@ -656,7 +656,7 @@ export default function Page() {
               </p>
             </div>
             <div className="space-y-7">
-              <ol className="list-disc ml-10">
+              <ol className="ml-10 list-disc">
                 <li>
                   Tắt diệt virus, tải{" "}
                   <span className="text-secondry font-semibold">
@@ -703,10 +703,10 @@ export default function Page() {
                 hoạt động 100% vì dev có thể thay đổi 1 số file hệ thống làm
                 tool ko hoạt động được, các bạn lưu ý giúp mình nha.
               </p>
-              <p className="text-secondry font-semibold text-base">
+              <p className="text-secondry text-base font-semibold">
                 Lưu ý trước khi cài đặt việt hóa
               </p>
-              <ol className="list-disc ml-10">
+              <ol className="ml-10 list-disc">
                 <li>
                   Việt hóa được thực hiện bởi{" "}
                   <span className="text-secondry font-semibold">
@@ -750,14 +750,14 @@ export default function Page() {
           <div>
             <VideoTab />
           </div>
-          <div className="p-4 bg-white rounded-lg space-y-6 text-sm">
+          <div className="p-4 space-y-6 text-sm bg-white rounded-lg">
             <div className="relative z-10" id="span">
-              <div className="text-xl font-bold bg-white w-fit pr-5">
+              <div className="w-fit pr-5 text-xl font-bold bg-white">
                 <p>Link tải game {gameDetail.name}</p>
               </div>
             </div>
-            <div className="divide-y divide-dashed divide-primary">
-              <div className="grid grid-cols-5 divide-x divide-dashed divide-primary">
+            <div className="divide-dashed divide-primary divide-y">
+              <div className="divide-dashed divide-primary grid grid-cols-5 divide-x">
                 <div className="lg:col-span-2 uppercase pr-1.5 font-semibold">
                   Video hướng dẫn cài đặt game {gameDetail.name}
                 </div>
@@ -768,7 +768,7 @@ export default function Page() {
                   <LinkButton title="xem video hướng dẫn" icon link="#" />
                 </div>
               </div>
-              <div className="grid grid-cols-5 divide-x divide-dashed divide-primary">
+              <div className="divide-dashed divide-primary grid grid-cols-5 divide-x">
                 <div className="lg:col-span-2 uppercase pr-1.5 font-semibold">
                   Video hướng dẫn cài đặt Việt hóa game {gameDetail.name}
                 </div>
@@ -779,7 +779,7 @@ export default function Page() {
                   <LinkButton title="xem video hướng dẫn" icon link="#" />
                 </div>
               </div>
-              <div className="grid grid-cols-5 divide-x divide-dashed divide-primary">
+              <div className="divide-dashed divide-primary grid grid-cols-5 divide-x">
                 <div className="lg:col-span-2 pr-1.5 font-semibold">
                   {gameDetail.name} (ID: 1741852779)
                 </div>
@@ -793,13 +793,13 @@ export default function Page() {
               </div>
             </div>
           </div>
-          <div className="p-4 bg-white rounded-lg space-y-6">
+          <div className="p-4 space-y-6 bg-white rounded-lg">
             <div className="relative z-10" id="span">
-              <div className="text-xl font-bold bg-white w-fit pr-5">
+              <div className="w-fit pr-5 text-xl font-bold bg-white">
                 <p>Link tải mod game {gameDetail.name}</p>
               </div>
             </div>
-            <div className="grid grid-cols-5 divide-x divide-dashed divide-primary">
+            <div className="divide-dashed divide-primary grid grid-cols-5 divide-x">
               <div className="col-span-2 pr-1.5 font-semibold">
                 File Việt Hóa - Việt Hóa Daominhha.net
               </div>
@@ -809,7 +809,7 @@ export default function Page() {
               </div>
             </div>
           </div>
-          <div className="p-4 bg-[#ffebd7] rounded-xl">
+          <div className="p-4 bg-[#ffebd7] rounded-xl space-y-5">
             <div className="flex flex-col items-center gap-1">
               <FontAwesomeIcon icon={faCircleInfo} className="size-6 block" />
               <span className="flex items-end uppercase gap-0.5">
@@ -817,7 +817,7 @@ export default function Page() {
                   icon={faTriangleExclamation}
                   className="size-6 text-yellow-500"
                 />
-                <p className="text-xl underline font-semibold text-black">
+                <p className="text-xl font-semibold text-black underline">
                   một số lưu ý
                 </p>
                 <FontAwesomeIcon
@@ -826,12 +826,12 @@ export default function Page() {
                 />
               </span>
             </div>
-            <div className="text-base space-y-4">
+            <div className="space-y-4 text-base">
               <div>
-                <p className="text-xl font-semibold text-center text-secondry">
+                <p className="text-secondry pb-4 text-xl font-semibold text-center">
                   1. MẬT KHẨU GIẢI NÉN FILE :
                 </p>
-                <ul className="list-disc ml-10">
+                <ul className="ml-10 list-disc">
                   <li>
                     Đối với file tải có tên{" "}
                     <span className="text-secondry font-semibold">
@@ -863,10 +863,10 @@ export default function Page() {
                 </p>
               </div>
               <div>
-                <p className="text-xl font-semibold text-center text-secondry">
+                <p className="text-secondry pb-4 text-xl font-semibold text-center">
                   2. HƯỚNG DẪN KHẮC PHỤC LỖI TẢI GGD GIỚI HẠN 24H :
                 </p>
-                <ul className="list-disc ml-10">
+                <ul className="ml-10 list-disc">
                   <li>
                     Có video hướng dẫn chi tiết ( lưu ý bật 1.1.1.1 lên để tải
                     nếu bị lỗi ko nén được file ) : <br />
@@ -877,10 +877,10 @@ export default function Page() {
                 </ul>
               </div>
               <div>
-                <p className="text-xl font-semibold text-center text-secondry">
+                <p className="text-secondry pb-4 text-xl font-semibold text-center">
                   3. KHẮC PHỤC TRUY CẬP WEB FILECRYPT BỊ XOAY VÒNG:
                 </p>
-                <ul className="list-disc ml-10">
+                <ul className="ml-10 list-disc">
                   <li>
                     Ae dùng tạm{" "}
                     <a href="#" className="text-secondry">
@@ -893,13 +893,13 @@ export default function Page() {
               </div>
             </div>
           </div>
-          <div className="bg-white rounded-lg p-4 space-y-6">
+          <div className="p-4 space-y-6 bg-white rounded-lg">
             <h2 className="text-xl font-bold flex items-center gap-2.5">
               <FontAwesomeIcon icon={faBug} className="size-8" />
               {""}
               Các Lỗi Thường Gặp {gameDetail.name}
             </h2>
-            <ul className="list-disc ml-5">
+            <ul className="ml-5 list-disc">
               {bugList.map((item, index) => (
                 <li key={index}>
                   <a href="" className="hover:text-secondry">
@@ -912,7 +912,7 @@ export default function Page() {
           <div>
             <Rating />
           </div>
-          <div className="mt-8 bg-white rounded-lg p-4 space-y-5">
+          <div className="p-4 mt-8 space-y-5 bg-white rounded-lg">
             <div className="relative z-10" id="span">
               <div className="w-fit pr-5 text-xl font-bold uppercase bg-white">
                 <p>Bình luận</p>
@@ -923,12 +923,12 @@ export default function Page() {
         </section>
         <section className="space-y-7 lg:sticky lg:top-0 h-fit">
           <AccountInfo name={userInfo.userName} avatar={userInfo.avatar} />
-          <div className="bg-white rounded-md overflow-hidden">
-            <h4 className="text-white text-center text-lg font-bold bg-primary">
+          <div className="overflow-hidden bg-white rounded-md">
+            <h4 className="bg-primary text-lg font-bold text-center text-white">
               Lịch sử cập nhật game <br />
               <span className="text-secondry">{gameDetail.name}</span>
             </h4>
-            <div className="p-4 divide-y divide-primary">
+            <div className="divide-primary p-4 divide-y">
               {historyUpdate.map((history, index) => (
                 <div key={index} className="flex items-center gap-3 py-3">
                   <div className="flex items-center gap-1">
@@ -943,8 +943,8 @@ export default function Page() {
           <div>
             <GameUpdate tabList={tabList} />
           </div>
-          <div className="bg-white rounded-md p-4">
-            <h3 className="uppercase text-xl font-bold pb-6">
+          <div className="p-4 bg-white rounded-md">
+            <h3 className="pb-6 text-xl font-bold uppercase">
               <span className="text-secondry">mua game</span> bản quyền
             </h3>
             <div className="space-y-7">
@@ -952,7 +952,7 @@ export default function Page() {
                 Nếu thấy game {gameDetail.name} hay thì nhớ mua bản quyền game
                 ủng hộ nhà phát triển các bạn nhé
               </p>
-              <button className="uppercase font-semibold py-3 px-5 text-white rounded bg-secondry hover:bg-primary">
+              <button className="bg-secondry hover:bg-primary px-5 py-3 font-semibold text-white uppercase rounded">
                 Click vào đây để mua bản quyền
               </button>
             </div>
