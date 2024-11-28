@@ -13,9 +13,11 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import FlyoutMess from "../flyoutMenu/flyoutMess";
+import { useTheme } from "next-themes";
 
 const Header = () => {
   const [isLight, setIsLight] = useState(true);
+  const { setTheme } = useTheme();
   return (
     <div>
       <div className="lg:flex items-center justify-between">
@@ -46,6 +48,7 @@ const Header = () => {
             <button
               onClick={() => {
                 setIsLight(true);
+                setTheme("light");
               }}
               className={`${
                 isLight ? "bg-white text-secondry" : "bg-none text-gray-700"
@@ -56,6 +59,7 @@ const Header = () => {
             <button
               onClick={() => {
                 setIsLight(false);
+                setTheme("dark");
               }}
               className={`${
                 !isLight ? "bg-black text-orange-600" : "bg-none text-gray-700"
