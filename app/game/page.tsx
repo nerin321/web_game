@@ -269,7 +269,7 @@ export default function Page() {
               className="relative flex items-center justify-between mb-6"
               id="span-item"
             >
-              <div className=" lg:pr-5 text-2xl font-bold bg-gray-200 dark:bg-black w-[400px] lg:w-[610px] flex items-center gap-1.5">
+              <div className=" lg:pr-5 text-2xl font-bold bg-gray-200 dark:bg-gray-900 w-[400px] lg:w-[610px] flex items-center gap-1.5">
                 <FontAwesomeIcon icon={faImage} className="size-6" />
                 <p className="truncate">
                   <span className="uppercase">ảnh game</span> {gameDetail.name}{" "}
@@ -289,7 +289,7 @@ export default function Page() {
               className="relative flex items-center justify-between mb-6"
               id="span-item"
             >
-              <div className="lg:pr-5 text-2xl font-bold bg-gray-200 dark:bg-black w-[420px] lg:w-[610px] flex items-center gap-1.5">
+              <div className="lg:pr-5 text-2xl font-bold bg-gray-200 dark:bg-gray-900 w-[420px] lg:w-[610px] flex items-center gap-1.5">
                 <FontAwesomeIcon icon={faCircleInfo} className="size-6" />
                 <p className="truncate">Chi tiết game {gameDetail.name}</p>
               </div>
@@ -395,7 +395,7 @@ export default function Page() {
               className="relative flex items-center justify-between mb-6"
               id="span"
             >
-              <div className="text-secondry dark:bg-dark-bg-primary px-5 ml-5 font-bold text-center bg-gray-200">
+              <div className="text-secondry dark:bg-gray-900 px-5 ml-5 font-bold text-center bg-gray-200">
                 <FontAwesomeIcon icon={faQuoteLeft} className="size-10" />
               </div>
             </div>

@@ -177,7 +177,7 @@ const page = () => {
             <img
               src={blogDetailProps.img}
               alt=""
-              className="object-cover w-full rounded-lg"
+              className="object-cover w-full rounded-xl"
             />
           </div>
           {/* nội dung bài */}
@@ -512,7 +512,7 @@ const page = () => {
 
           <div className="dark:bg-dark-bg-primary p-4 mt-8 space-y-5 bg-white rounded-lg">
             <div className="relative z-10" id="span">
-              <div className="w-fit dark:bg-gray-900 pr-5 text-xl font-bold uppercase bg-white">
+              <div className="w-fit dark:bg-dark-bg-primary pr-5 text-xl font-bold uppercase bg-white">
                 <p>Bình luận</p>
               </div>
             </div>

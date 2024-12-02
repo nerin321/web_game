@@ -267,7 +267,7 @@ const page = () => {
         id="span"
         className="relative flex items-center justify-between my-6"
       >
-        <span className=" pr-5 text-2xl font-bold capitalize bg-gray-200">
+        <span className=" pr-5 text-2xl font-bold capitalize bg-gray-200 dark:bg-gray-900">
           Games Việt Hóa
         </span>
       </div>
