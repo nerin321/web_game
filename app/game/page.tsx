@@ -259,7 +259,7 @@ export default function Page() {
         <FontAwesomeIcon icon={faAnglesRight} className="size-3" />
         <span>{gameDetail.name}</span>
       </p>
-      <h1 className=" text-3xl font-bold">
+      <h1 className=" dark:text-secondry text-3xl font-bold">
         Tải game {gameDetail.name} - PC download full
       </h1>
       <article className="lg:grid lg:grid-cols-3 lg:relative lg:space-y-0 block gap-6 space-y-6">
@@ -269,7 +269,7 @@ export default function Page() {
               className="relative flex items-center justify-between mb-6"
               id="span-item"
             >
-              <div className=" lg:pr-5 text-2xl font-bold bg-gray-200 w-[400px] lg:w-[610px] flex items-center gap-1.5">
+              <div className=" lg:pr-5 text-2xl font-bold bg-gray-200 dark:bg-black w-[400px] lg:w-[610px] flex items-center gap-1.5">
                 <FontAwesomeIcon icon={faImage} className="size-6" />
                 <p className="truncate">
                   <span className="uppercase">ảnh game</span> {gameDetail.name}{" "}
@@ -289,13 +289,13 @@ export default function Page() {
               className="relative flex items-center justify-between mb-6"
               id="span-item"
             >
-              <div className="lg:pr-5 text-2xl font-bold bg-gray-200 w-[420px] lg:w-[610px] flex items-center gap-1.5">
+              <div className="lg:pr-5 text-2xl font-bold bg-gray-200 dark:bg-black w-[420px] lg:w-[610px] flex items-center gap-1.5">
                 <FontAwesomeIcon icon={faCircleInfo} className="size-6" />
                 <p className="truncate">Chi tiết game {gameDetail.name}</p>
               </div>
             </div>
             <div className="lg:grid grid-cols-2 gap-5">
-              <ul className="rounded-xl border-primary p-4 space-y-3 bg-white border">
+              <ul className="rounded-xl border-primary dark:bg-dark-bg-primary p-4 space-y-3 bg-white border">
                 <li className="flex items-center gap-2">
                   <FontAwesomeIcon icon={faNewspaper} className="size-5" />
                   <p>
@@ -344,7 +344,7 @@ export default function Page() {
                   </p>
                 </li>
               </ul>
-              <ul className="border-primary rounded-xl h-fit p-4 normal-case bg-white border">
+              <ul className="border-primary rounded-xl h-fit dark:bg-dark-bg-primary p-4 normal-case bg-white border">
                 <li className="flex items-center gap-2 py-1">
                   <FontAwesomeIcon icon={faCircleCheck} className="size-5" />
                   <p>
@@ -395,11 +395,11 @@ export default function Page() {
               className="relative flex items-center justify-between mb-6"
               id="span"
             >
-              <div className="text-secondry px-5 ml-5 font-bold text-center bg-gray-200">
+              <div className="text-secondry dark:bg-dark-bg-primary px-5 ml-5 font-bold text-center bg-gray-200">
                 <FontAwesomeIcon icon={faQuoteLeft} className="size-10" />
               </div>
             </div>
-            <div className="p-2.5 bg-primary text-white font-medium rounded-md">
+            <div className="p-2.5 bg-primary dark:bg-dark-bg-primary text-white font-medium rounded-md">
               <div className="flex items-center justify-between">
                 <p>Nội dung bài</p>
                 <button
@@ -750,9 +750,9 @@ export default function Page() {
           <div>
             <VideoTab />
           </div>
-          <div className="p-4 space-y-6 text-sm bg-white rounded-lg">
+          <div className="dark:bg-dark-bg-primary p-4 space-y-6 text-sm bg-white rounded-lg">
             <div className="relative z-10" id="span">
-              <div className="w-fit pr-5 text-xl font-bold bg-white">
+              <div className="w-fit dark:bg-dark-bg-primary pr-5 text-xl font-bold bg-white">
                 <p>Link tải game {gameDetail.name}</p>
               </div>
             </div>
@@ -793,9 +793,9 @@ export default function Page() {
               </div>
             </div>
           </div>
-          <div className="p-4 space-y-6 bg-white rounded-lg">
+          <div className="dark:bg-dark-bg-primary p-4 space-y-6 bg-white rounded-lg">
             <div className="relative z-10" id="span">
-              <div className="w-fit pr-5 text-xl font-bold bg-white">
+              <div className="w-fit dark:bg-dark-bg-primary pr-5 text-xl font-bold bg-white">
                 <p>Link tải mod game {gameDetail.name}</p>
               </div>
             </div>
@@ -809,7 +809,7 @@ export default function Page() {
               </div>
             </div>
           </div>
-          <div className="p-4 bg-[#ffebd7] rounded-xl space-y-5">
+          <div className="p-4 bg-[#ffebd7] rounded-xl space-y-5 text-primary font-medium">
             <div className="flex flex-col items-center gap-1">
               <FontAwesomeIcon icon={faCircleInfo} className="size-6 block" />
               <span className="flex items-end uppercase gap-0.5">
@@ -893,7 +893,7 @@ export default function Page() {
               </div>
             </div>
           </div>
-          <div className="p-4 space-y-6 bg-white rounded-lg">
+          <div className="dark:bg-dark-bg-primary p-4 space-y-6 bg-white rounded-lg">
             <h2 className="text-xl font-bold flex items-center gap-2.5">
               <FontAwesomeIcon icon={faBug} className="size-8" />
               {""}
@@ -912,9 +912,9 @@ export default function Page() {
           <div>
             <Rating />
           </div>
-          <div className="p-4 mt-8 space-y-5 bg-white rounded-lg">
+          <div className="dark:bg-dark-bg-primary p-4 mt-8 space-y-5 bg-white rounded-lg">
             <div className="relative z-10" id="span">
-              <div className="w-fit pr-5 text-xl font-bold uppercase bg-white">
+              <div className="w-fit dark:bg-dark-bg-primary pr-5 text-xl font-bold uppercase bg-white">
                 <p>Bình luận</p>
               </div>
             </div>
@@ -923,7 +923,7 @@ export default function Page() {
         </section>
         <section className="space-y-7 lg:sticky lg:top-0 h-fit">
           <AccountInfo name={userInfo.userName} avatar={userInfo.avatar} />
-          <div className="overflow-hidden bg-white rounded-md">
+          <div className="dark:bg-dark-bg-primary overflow-hidden bg-white rounded-md">
             <h4 className="bg-primary text-lg font-bold text-center text-white">
               Lịch sử cập nhật game <br />
               <span className="text-secondry">{gameDetail.name}</span>
@@ -943,7 +943,7 @@ export default function Page() {
           <div>
             <GameUpdate tabList={tabList} />
           </div>
-          <div className="p-4 bg-white rounded-md">
+          <div className="dark:bg-dark-bg-primary p-4 bg-white rounded-md">
             <h3 className="pb-6 text-xl font-bold uppercase">
               <span className="text-secondry">mua game</span> bản quyền
             </h3>

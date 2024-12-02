@@ -23,7 +23,7 @@ const VideoTab = () => {
   const [tab, setTab] = useState(true);
 
   return (
-    <div className="border bg-white rounded-lg overflow-hidden">
+    <div className="dark:bg-dark-bg-primary overflow-hidden bg-white border rounded-lg">
       <div className="grid grid-cols-2 text-xs text-white">
         <button
           onClick={() => setTab(true)}
@@ -51,8 +51,8 @@ const VideoTab = () => {
           </div>
         ) : (
           <div className="space-y-6 text-base">
-            <p className="text-lg uppercase font-bold">Tối thiểu :</p>
-            <ul className="list-disc pl-10">
+            <p className="text-lg font-bold uppercase">Tối thiểu :</p>
+            <ul className="pl-10 list-disc">
               {tabProps.requirements.map((req, index) => (
                 <li key={index}>{req}</li>
               ))}

@@ -77,7 +77,7 @@ const Rating = () => {
   };
 
   return (
-    <div className="bg-white rounded-lg p-4 space-y-6">
+    <div className="dark:bg-dark-bg-primary p-4 space-y-6 bg-white rounded-lg">
       <h2 className="text-xl font-bold flex items-center gap-2.5">
         <FontAwesomeIcon icon={faGamepad} className="size-6" /> Đánh giá game
         Japanese Rail Sim Hakone Town of Natural BHS Việt Hóa ({rateProps.time}{" "}
@@ -111,7 +111,7 @@ const Rating = () => {
                 strokeLinecap="round"
               />
             </svg>
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-xl">
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-xl text-white">
               <p className="text-6xl font-semibold">{ratingPoint().avg}</p>
               <p>{ratingPoint().cmt}</p>
             </div>
@@ -125,9 +125,9 @@ const Rating = () => {
                 <b>{rateProps.story}</b> điểm
               </p>
             </div>
-            <div className="w-full bg-primary rounded-full h-2">
+            <div className="bg-primary w-full h-2 rounded-full">
               <div
-                className="bg-red-500 h-full rounded-full flex items-center justify-center text-white text-sm font-semibold"
+                className="flex items-center justify-center h-full text-sm font-semibold text-white bg-red-500 rounded-full"
                 style={{ width: `${rateProps.story}%` }}
               ></div>
             </div>
@@ -139,9 +139,9 @@ const Rating = () => {
                 <b>{rateProps.gamePlay}</b> điểm
               </p>
             </div>
-            <div className="w-full bg-primary rounded-full h-2">
+            <div className="bg-primary w-full h-2 rounded-full">
               <div
-                className="bg-red-500 h-full rounded-full flex items-center justify-center text-white text-sm font-semibold"
+                className="flex items-center justify-center h-full text-sm font-semibold text-white bg-red-500 rounded-full"
                 style={{ width: `${rateProps.gamePlay}%` }}
               ></div>
             </div>
@@ -153,9 +153,9 @@ const Rating = () => {
                 <b>{rateProps.graphic}</b> điểm
               </p>
             </div>
-            <div className="w-full bg-primary rounded-full h-2">
+            <div className="bg-primary w-full h-2 rounded-full">
               <div
-                className="bg-red-500 h-full rounded-full flex items-center justify-center text-white text-sm font-semibold"
+                className="flex items-center justify-center h-full text-sm font-semibold text-white bg-red-500 rounded-full"
                 style={{ width: `${rateProps.graphic}%` }}
               ></div>
             </div>
@@ -167,9 +167,9 @@ const Rating = () => {
                 <b>{rateProps.sound}</b> điểm
               </p>
             </div>
-            <div className="w-full bg-primary rounded-full h-2">
+            <div className="bg-primary w-full h-2 rounded-full">
               <div
-                className="bg-red-500 h-full rounded-full flex items-center justify-center text-white text-sm font-semibold"
+                className="flex items-center justify-center h-full text-sm font-semibold text-white bg-red-500 rounded-full"
                 style={{ width: `${rateProps.sound}%` }}
               ></div>
             </div>
@@ -181,9 +181,9 @@ const Rating = () => {
                 <b>{rateProps.all}</b> điểm
               </p>
             </div>
-            <div className="w-full bg-primary rounded-full h-2">
+            <div className="bg-primary w-full h-2 rounded-full">
               <div
-                className="bg-red-500 h-full rounded-full flex items-center justify-center text-white text-sm font-semibold"
+                className="flex items-center justify-center h-full text-sm font-semibold text-white bg-red-500 rounded-full"
                 style={{ width: `${rateProps.all}%` }}
               ></div>
             </div>
@@ -191,11 +191,14 @@ const Rating = () => {
         </div>
       </div>
       <div className="flex flex-wrap justify-center py-4">
-        <div className="lg:w-fit">
-          <table>
+        <div className="lg:w-fit p-4 border rounded-lg">
+          <table className="">
             <tbody>
               {categories.map((category) => (
-                <tr key={category} className="flex flex-wrap justify-end">
+                <tr
+                  key={category}
+                  className="flex flex-wrap justify-end border-b"
+                >
                   <td className="px-4 py-2">{category}</td>
                   {ratingOptions.map((option) => (
                     <td key={option} className="px-4 py-2 text-center">
@@ -203,7 +206,7 @@ const Rating = () => {
                         className={`${
                           ratePoint[category as keyof Scores] === option
                             ? "bg-primary"
-                            : "bg-black"
+                            : "bg-black dark:bg-dark-bg-secondary"
                         } transition-colors text-white rounded w-14 h-10 font-semibold hover:bg-primary`}
                         onClick={() =>
                           PointChouse(category as keyof Scores, option)

@@ -364,16 +364,22 @@ export default function Home() {
         <SlideShow slides={SLIDES} options={OPTIONS} imgs={imgs} button />
         <div className="lg:grid hidden grid-cols-3 gap-3 py-4">
           {headerGames.map((item, index) => (
-            <div key={index} className="flex items-center gap-10 bg-white">
+            <div
+              key={index}
+              className="dark:bg-dark-bg-primary dark:border border-dark-border flex items-center gap-10 bg-white rounded-lg"
+            >
               <img src={item.img} alt="" className="h-28" />
               <div>
                 <a
                   href={item.link}
-                  className="hover:text-secondry block text-lg font-bold text-blue-800 uppercase"
+                  className="hover:text-secondry text-primary dark:text-white block text-lg font-bold uppercase"
                 >
                   {item.name}
                 </a>
-                <a href={item.link} className="block text-lg text-orange-700">
+                <a
+                  href={item.link}
+                  className="dark:text-white block text-lg text-orange-700"
+                >
                   Xem thêm
                 </a>
               </div>
@@ -384,7 +390,7 @@ export default function Home() {
       <section className="my-5">
         <HeaderSpan title="Hot" />
         <div className="lg:grid-cols-2 grid gap-5 overflow-hidden">
-          <div className="rounded-xl bg-white max-h-[560px]">
+          <div className="rounded-xl bg-white max-h-[560px] dark:bg-dark-bg-primary dark:border border-dark-border">
             <div className="rounded-xl hover-animation group ">
               <img
                 src={gameHots[0].img}
@@ -392,7 +398,7 @@ export default function Home() {
                 className="group-hover:scale-105 object-cover w-full transition-all"
               />
             </div>
-            <div className="px-6 text-blue-700">
+            <div className="px-6">
               <a
                 href={gameHots[0].link}
                 className="py-7 block text-xl font-bold"
@@ -402,7 +408,7 @@ export default function Home() {
               <p className=" font-medium">{gameHots[0].desc}</p>
               <a
                 href={gameHots[0].link}
-                className="w-fit hover:bg-blue-700 hover:text-white block px-5 py-2 my-4 border border-blue-700 rounded-lg"
+                className="w-fit hover:bg-blue-700 hover:text-white dark:border-white block px-5 py-2 my-4 border border-blue-700 rounded-lg"
               >
                 xem bài này
               </a>
@@ -414,7 +420,7 @@ export default function Home() {
                 {index === 0 ? (
                   ""
                 ) : (
-                  <div className="rounded-xl flex items-center gap-5 p-3 bg-white border">
+                  <div className="rounded-xl dark:bg-dark-bg-primary dark:border-dark-border flex items-center gap-5 p-3 bg-white border">
                     <div className="hover-animation group">
                       <img
                         src={item.img}
@@ -491,7 +497,7 @@ export default function Home() {
             </div>
           </div>
           <div className="relative mb-6" id="span-title">
-            <span className="w-fit flex items-center gap-1 px-5 ml-8 text-2xl font-bold uppercase bg-gray-200">
+            <span className="w-fit dark:bg-gray-900 flex items-center gap-1 px-5 ml-8 text-2xl font-bold uppercase bg-gray-200">
               Thủ thuật <p className="text-[#f15a24]">mới nhất</p>
             </span>
           </div>
@@ -513,7 +519,7 @@ export default function Home() {
           <GameUpdate tabList={tabList} />
         </section>
       </article>
-      <div className=" p-4 mt-8 font-medium bg-white border-l-4 border-orange-600 rounded">
+      <div className=" dark:bg-dark-bg-primary p-4 mt-8 font-medium bg-white border-l-4 border-orange-600 rounded">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ratione
           iure magni quibusdam dignissimos, quo maiores sed. Rerum tempore animi

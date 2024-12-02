@@ -5,7 +5,7 @@ import React from "react";
 const Footer = () => {
   return (
     <article>
-      <section className="border-secondry text-primary pt-14 grid lg:grid-cols-3 gap-6 pb-4 mt-12 border-t-4">
+      <section className="border-secondry pt-14 lg:grid-cols-3 grid gap-6 pb-4 mt-12 border-t-4">
         <div className="space-y-6">
           <div className="flex items-center gap-1">
             <img
@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
         <div>
           <div>
-            <h3 className="text-xl font-bold uppercase">
+            <h3 className="dark:text-secondry text-xl font-bold uppercase">
               Chính sách & điều khoản
             </h3>
             <ul className="pl-6 text-lg font-semibold list-disc">
@@ -64,7 +64,9 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h3 className="text-xl font-bold uppercase">DANH MỤC YÊU THÍCH</h3>
+            <h3 className="dark:text-secondry text-xl font-bold uppercase">
+              DANH MỤC YÊU THÍCH
+            </h3>
             <ul className="pl-6 text-lg font-semibold list-disc">
               <li>Game tải nhiều nhất</li>
               <li>Game Việt Hóa</li>
@@ -86,25 +88,42 @@ const Footer = () => {
             className="w-full h-[89px] object-cover"
           />
           <div className="mt-10">
-            <h3 className="font-bold uppercase">Mục xem nhiều</h3>
+            <h3 className="dark:text-secondry  font-bold uppercase">
+              Mục xem nhiều
+            </h3>
             <div className="divide-primary mt-4 divide-y">
-              <a href="" className="flex items-center justify-between py-1.5">
+              <a
+                href=""
+                className="flex items-center justify-between py-1.5 hover:text-secondry"
+              >
                 <p>game việt hóa</p>
                 <p>`(5.000.000 views - 938 bài)`</p>
               </a>
-              <a href="" className="flex items-center justify-between py-1.5">
+              <a
+                href=""
+                className="flex items-center justify-between py-1.5 hover:text-secondry"
+              >
                 <p>game việt hóa</p>
                 <p>`(5.000.000 views - 938 bài)`</p>
               </a>
-              <a href="" className="flex items-center justify-between py-1.5">
+              <a
+                href=""
+                className="flex items-center justify-between py-1.5 hover:text-secondry"
+              >
                 <p>game việt hóa</p>
                 <p>`(5.000.000 views - 938 bài)`</p>
               </a>
-              <a href="" className="flex items-center justify-between py-1.5">
+              <a
+                href=""
+                className="flex items-center justify-between py-1.5 hover:text-secondry"
+              >
                 <p>game việt hóa</p>
                 <p>`(5.000.000 views - 938 bài)`</p>
               </a>
-              <a href="" className="flex items-center justify-between py-1.5">
+              <a
+                href=""
+                className="flex items-center justify-between py-1.5 hover:text-secondry"
+              >
                 <p>game việt hóa</p>
                 <p>`(5.000.000 views - 938 bài)`</p>
               </a>
@@ -112,7 +131,7 @@ const Footer = () => {
           </div>
         </div>
       </section>
-      <div className="text-center text-xs font-medium">
+      <div className="text-xs font-medium text-center">
         <p>
           ❤️ Copyright &copy; 2018 - CHÚNG TÔI CHỈ CÓ 2 WEBSITE DAOMINHHA.NET &
           DIXGAMES.COM ❤️ KHÔNG LIÊN QUAN ĐẾN BẤT KỲ WEBSITE KHÁC

@@ -26,9 +26,9 @@ interface GameUpdateProps {
 
 const GameUpdate: React.FC<GameUpdateProps> = ({ tabList }) => {
   return (
-    <div className="overflow-hidden border rounded-lg">
+    <div className="dark:border-dark-border overflow-hidden border rounded-lg">
       <TabGroup>
-        <div className="border-b border-gray-200">
+        <div className="dark:border-dark-border border-b border-gray-200">
           <TabList className="bg-primary grid grid-cols-2">
             {/* categories */}
             {tabList.games.map((game) => (
@@ -45,11 +45,11 @@ const GameUpdate: React.FC<GameUpdateProps> = ({ tabList }) => {
           {/* items */}
           {tabList.games.map((game) => (
             <TabPanel key={game.id}>
-              <div className="border bg-white px-2.5 pb-2.5 divide-y divide-black">
+              <div className="border bg-white px-2.5 pb-2.5 divide-y divide-black dark:bg-dark-bg-primary dark:border-dark-border dark:divide-dark-border">
                 {game.featured.map((item, index) => (
                   <div
                     key={index}
-                    className="first:mt-0 text-primary flex items-center gap-3 pt-3 mt-6"
+                    className="first:mt-0 flex items-center gap-3 pt-3 mt-6"
                   >
                     <div className="overflow-hidden">
                       <img
@@ -63,7 +63,7 @@ const GameUpdate: React.FC<GameUpdateProps> = ({ tabList }) => {
                     <div>
                       <a
                         href={item.link}
-                        className="hover:text-secondry text-sm font-bold"
+                        className="hover:text-secondry dark:text-secondry text-sm font-bold"
                       >
                         {item.name}
                       </a>

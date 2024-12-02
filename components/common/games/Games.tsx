@@ -67,7 +67,7 @@ const Games: React.FC<GameInfo> = ({
       <div>
         <a
           href={dowloadLink}
-          className="hover:text-secondry block text-xl font-bold truncate"
+          className="hover:text-secondry dark:text-secondry dark:hover:text-white block text-xl font-bold truncate"
         >
           {name}
         </a>
@@ -80,7 +80,7 @@ const Games: React.FC<GameInfo> = ({
           ))}
         </div>
         <div className="grid grid-cols-2 gap-3">
-          <button className="hover:bg-secondry flex items-center px-4 py-2 bg-black rounded">
+          <button className="hover:bg-secondry dark:bg-dark-bg-secondary flex items-center px-4 py-2 bg-black rounded">
             <a href={dowloadLink} className="block text-white uppercase">
               <FontAwesomeIcon
                 icon={faDownload}
@@ -89,7 +89,7 @@ const Games: React.FC<GameInfo> = ({
               Tải game
             </a>
           </button>
-          <div className="flex items-center justify-center gap-3 px-4 py-2 text-xs font-semibold text-white bg-black rounded">
+          <div className="dark:bg-dark-bg-secondary flex items-center justify-center gap-3 px-4 py-2 text-xs font-semibold text-white bg-black rounded">
             <FontAwesomeIcon icon={faStar} className="size-6 text-yellow-500" />
             <p>{rate}/100 điểm</p>
           </div>

@@ -271,8 +271,8 @@ const page = () => {
           Games Việt Hóa
         </span>
       </div>
-      <div className="px-7 lg:flex items-center w-full py-4 bg-white gap-2.5">
-        <div className="gap-x-6 gap-y-2 grid w-full lg:grid-cols-4">
+      <div className="px-7 lg:flex items-center w-full py-4 bg-white dark:bg-dark-bg-primary dark:border border-dark-border rounded-lg gap-2.5">
+        <div className="gap-x-6 gap-y-2 lg:grid-cols-4 grid w-full">
           {filterCategory.map((filter, index) => (
             <div key={index} className="flex items-center justify-between">
               <span className=" text-sm font-semibold">{filter.category}</span>
@@ -280,7 +280,7 @@ const page = () => {
                 name={filter.id}
                 onChange={handleChange}
                 value={filters[filter.id as keyof Filters]}
-                className="border py-1.5 px-2.5 rounded-md text-sm w-[264px] lg:w-[150px] appearance-none"
+                className="border py-1.5 px-2.5 rounded-md text-sm w-[264px] lg:w-[150px] appearance-none dark:bg-white dark:text-black"
               >
                 {filter.options.map((option, index) => (
                   <option key={index} value={option} className="">
@@ -291,12 +291,12 @@ const page = () => {
             </div>
           ))}
         </div>
-        <button className="px-10 py-2.5 mt-4 block bg-secondry uppercase w-full lg:w-fit text-white text-sm font-semibold rounded-md hover:bg-primary">
+        <button className="px-10 py-2.5 mt-4 lg:mt-0 block bg-secondry uppercase w-full lg:w-fit text-white text-sm font-semibold rounded-md hover:bg-primary">
           Lọc
         </button>
       </div>
       <section className="my-6">
-        <div className="grid lg:grid-cols-4 gap-6">
+        <div className="lg:grid-cols-4 grid gap-6">
           {gameInfo.map((game, index) => (
             <Games
               img={game.img}
@@ -311,7 +311,7 @@ const page = () => {
           ))}
         </div>
       </section>
-      <div className=" p-4 mt-8 font-medium bg-white border-l-4 border-orange-600 rounded">
+      <div className=" dark:bg-dark-bg-primary p-4 mt-8 font-medium bg-white border-l-4 border-orange-600 rounded">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ratione
           iure magni quibusdam dignissimos, quo maiores sed. Rerum tempore animi
@@ -350,7 +350,7 @@ const page = () => {
           <p>Xin cảm ơn</p>
         </div>
         <div className="flex justify-center text-red-500">
-          <button onClick={() => setIsExpand(!isExpand)}>
+          <button onClick={() => setIsExpand(!isExpand)} className="uppercase">
             {isExpand == true ? "Thu gọn" : "Xem thêm"}
           </button>
         </div>

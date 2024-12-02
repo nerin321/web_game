@@ -168,7 +168,9 @@ const page = () => {
           <span>{blogDetailProps.title}</span>
         </p>
       </div>
-      <h2 className="text-3xl font-bold">{blogDetailProps.title}</h2>
+      <h2 className="dark:text-secondry text-3xl font-bold">
+        {blogDetailProps.title}
+      </h2>
       <article className="lg:space-y-0 lg:grid block grid-cols-3 gap-6 space-y-6">
         <section className="space-y-7 col-span-2">
           <div className="hover-animation">
@@ -184,11 +186,11 @@ const page = () => {
               className="relative flex items-center justify-between mb-6"
               id="span"
             >
-              <div className="text-secondry px-5 ml-5 font-bold text-center bg-gray-200">
+              <div className="text-secondry dark:bg-gray-900 px-5 ml-5 font-bold text-center bg-gray-200">
                 <FontAwesomeIcon icon={faQuoteLeft} className="size-10" />
               </div>
             </div>
-            <div className="p-2.5 bg-primary text-white font-medium rounded-md">
+            <div className="p-2.5 bg-primary text-white font-medium rounded-md dark:bg-dark-bg-primary">
               <div className="flex items-center justify-between">
                 <p>Nội dung bài</p>
                 <button
@@ -508,9 +510,9 @@ const page = () => {
             </p>
           </div>
 
-          <div className="p-4 mt-8 space-y-5 bg-white rounded-lg">
+          <div className="dark:bg-dark-bg-primary p-4 mt-8 space-y-5 bg-white rounded-lg">
             <div className="relative z-10" id="span">
-              <div className="w-fit pr-5 text-xl font-bold uppercase bg-white">
+              <div className="w-fit dark:bg-gray-900 pr-5 text-xl font-bold uppercase bg-white">
                 <p>Bình luận</p>
               </div>
             </div>

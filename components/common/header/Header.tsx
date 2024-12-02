@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import FlyoutMenu from "@/components/common/flyoutMenu/FlyoutMenu";
 import Nav from "@/components/common/nav/Nav";
 import {
@@ -16,15 +16,18 @@ import FlyoutMess from "../flyoutMenu/flyoutMess";
 import { useTheme } from "next-themes";
 
 const Header = () => {
-  const [isLight, setIsLight] = useState(true);
+  const [isLight, setIsLight] = useState(false);
   const { setTheme } = useTheme();
+  useEffect(() => {
+    setTheme(isLight ? "light" : "dark");
+  }, [isLight, setTheme]);
   return (
     <div>
       <div className="lg:flex items-center justify-between">
         <div className="flex items-center justify-center text-sm font-medium">
           <FontAwesomeIcon icon={faHeart} className="size-4 text-red-600" />
           <p>
-            <a href="#" className="font-bold text-secondry uppercase">
+            <a href="#" className="text-secondry font-bold uppercase">
               Donate{" "}
             </a>
             tải tốc độ cao chỉ 1000 donate/1game
@@ -33,7 +36,7 @@ const Header = () => {
         <div className="w-full border border-black flex flex-nowrap rounded-md max-w-[415px]">
           <input
             type="text"
-            className="rounded-s-md w-full pl-3"
+            className="rounded-s-md w-full pl-3 dark:bg-[#262a30]"
             placeholder="Tìm kiếm game..."
           />
           <button className="size-10 rounded-e-md flex items-center justify-center bg-black">

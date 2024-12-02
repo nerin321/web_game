@@ -17,7 +17,7 @@ const LinkButton: React.FC<Linkprops> = ({ title, icon, link }) => {
         {icon ? (
           <FontAwesomeIcon
             icon={faCirclePlay}
-            className="size-5 text-primary group-hover:text-white "
+            className="size-5 text-primary group-hover:text-white dark:text-white "
           />
         ) : (
           ""

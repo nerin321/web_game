@@ -203,9 +203,12 @@ const NewComment: React.FC<CommentProps> = ({ comments }) => {
       <div className="space-y-7">
         <div className="flex items-center py-2 border-b border-gray-500">
           <p className="border-primary px-1 border-r-2">
-            Bạn đã đăng nhập - <a href="#">{userInfo.userName}</a>
+            Bạn đã đăng nhập -{" "}
+            <a href="#" className="text-primary">
+              {userInfo.userName}
+            </a>
           </p>
-          <a href="#" className="px-1">
+          <a href="#" className="text-primary px-1">
             Đăng xuất
           </a>
         </div>
@@ -216,7 +219,7 @@ const NewComment: React.FC<CommentProps> = ({ comments }) => {
             className="object-cover w-12 h-12 rounded-full"
           />
           <textarea
-            className="w-full h-[100px] p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full h-[100px] p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
             placeholder="Write a new comment..."
             value={newCommentContent}
             onChange={(e) => setNewCommentContent(e.target.value)}
@@ -350,7 +353,7 @@ const CommentItem: React.FC<CommentItemProps> = ({
             <textarea
               value={replyContent}
               onChange={(e) => setReplyContent(e.target.value)}
-              className="w-full h-[100px] p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full h-[100px] p-2 border border-gray-300 rounded-md focus:outline-none bg-white focus:ring-2 focus:ring-blue-500"
               placeholder={`Reply to ${comment.userName}...`}
             />
           </div>

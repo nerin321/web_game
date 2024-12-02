@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="w-[95%] lg:w-[90%] mx-auto py-5 bg-gray-200 dark:bg-black text-primary dark:text-white relative">
+      <body className="w-[95%] lg:w-[90%] mx-auto py-5 bg-gray-200 dark:bg-gray-900 text-primary dark:text-white relative">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -26,7 +26,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
-          <div className="fixed bottom-5 left-5 text-white flex flex-col gap-1">
+          <div className="bottom-5 left-5 fixed flex flex-col gap-1 text-white">
             <a href="#" className="py-1.5 px-4 w-fit bg-blue-600 rounded">
               Báo lỗi Nạp VIP
             </a>

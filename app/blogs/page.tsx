@@ -192,13 +192,13 @@ const Page = () => {
         id="span"
         className="relative flex items-center justify-between my-6"
       >
-        <span className="pr-5 text-2xl font-bold capitalize bg-gray-200">
+        <span className="dark:bg-gray-900 pr-5 text-2xl font-bold capitalize bg-gray-200">
           Thủ thuật
         </span>
       </div>
-      <article className="block lg:grid lg:grid-cols-3 relative gap-5 space-y-5 lg:space-y-0">
-        <section className="col-span-2 ">
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
+      <article className="lg:grid lg:grid-cols-3 lg:space-y-0 relative block gap-5 space-y-5">
+        <section className=" col-span-2">
+          <div className="lg:grid-cols-3 grid grid-cols-2 gap-6">
             {blogList.map((blog, index) => (
               <Trick
                 img={blog.img}
@@ -210,11 +210,11 @@ const Page = () => {
           </div>
           <Pagination currentPage={1} totalPages={5} />
         </section>
-        <section className="sticky top-0 h-fit">
+        <section className="h-fit sticky top-0">
           <GameUpdate tabList={tabList} />
         </section>
       </article>
-      <div className=" p-4 mt-8 font-medium bg-white border-l-4 border-orange-600 rounded">
+      <div className=" dark:bg-dark-bg-primary p-4 mt-8 font-medium bg-white border-l-4 border-orange-600 rounded">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ratione
           iure magni quibusdam dignissimos, quo maiores sed. Rerum tempore animi

@@ -9,7 +9,7 @@ interface UserInfo {
 }
 const AccountInfo: React.FC<UserInfo> = ({ name, avatar }) => {
   return (
-    <div className="p-4 bg-white rounded-md">
+    <div className="dark:bg-dark-bg-primary p-4 bg-white rounded-md">
       <h2 className="py-5 text-xl font-bold uppercase">
         <span className="text-secondry">Thông tin</span> tài khoản
       </h2>

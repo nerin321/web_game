@@ -47,7 +47,7 @@ const UpcomingGame = () => {
       <h4 className="bg-primary w-full py-3 text-xl font-bold text-center text-white">
         Game sắp phát hành
       </h4>
-      <div className="p-4 bg-white divide-y divide-black">
+      <div className="dark:bg-dark-bg-primary dark:divide-dark-border p-4 bg-white divide-y divide-black">
         {gamesNew.map((game, index) => (
           <div key={index} className="py-2.5">
             {index === 0 ? (
@@ -61,7 +61,7 @@ const UpcomingGame = () => {
                 </div>
                 <a
                   href={game.link}
-                  className="hover:text-secondry block pt-2 text-sm font-bold text-center"
+                  className="hover:text-secondry dark:text-secondry block pt-2 text-sm font-bold text-center"
                 >
                   {game.name}
                 </a>
@@ -78,7 +78,7 @@ const UpcomingGame = () => {
                 <div>
                   <a
                     href={game.link}
-                    className="hover:text-secondry block mb-3 text-sm font-bold"
+                    className="hover:text-secondry dark:text-secondry block mb-3 text-sm font-bold"
                   >
                     {game.name}
                   </a>

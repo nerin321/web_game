@@ -127,9 +127,9 @@ export default function Nav() {
     <header>
       <nav
         aria-label="Global"
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        className="max-w-7xl lg:px-8 flex items-center justify-between p-6 mx-auto"
       >
-        <div className="flex lg:hidden">
+        <div className="lg:hidden flex">
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
@@ -139,27 +139,27 @@ export default function Nav() {
             <FontAwesomeIcon icon={faBars} />
           </button>
         </div>
-        <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+        <PopoverGroup className="lg:flex lg:gap-x-12 hidden">
           <a
             href="#"
-            className="text-sm/6 font-bold  uppercase hover:text-secondry"
+            className="text-sm/6 hover:text-secondry font-bold uppercase"
           >
             Game tải nhiều
           </a>
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-bold  uppercase hover:text-secondry">
+            <PopoverButton className="gap-x-1 text-sm/6 hover:text-secondry flex items-center font-bold uppercase">
               Game +
             </PopoverButton>
 
             <PopoverPanel
               transition
-              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white dark:bg-dark-bg-primary shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="p-4">
                 {games.map((item) => (
                   <div
                     key={item.name}
-                    className="group relative flex items-center gap-x-6 rounded-lg px-4 font-semibold text-sm/6 uppercase hover:bg-gray-50"
+                    className="group gap-x-6 text-sm/6 hover:text-secondry relative flex items-center px-4 font-semibold uppercase rounded-lg"
                   >
                     <a href={item.href}>{item.name}</a>
                   </div>
@@ -170,42 +170,42 @@ export default function Nav() {
 
           <a
             href="./category"
-            className="text-sm/6 font-bold  uppercase hover:text-secondry"
+            className="text-sm/6 hover:text-secondry font-bold uppercase"
           >
             Game việt hóa
           </a>
           <a
             href="#"
-            className="text-sm/6 font-bold  uppercase hover:text-secondry"
+            className="text-sm/6 hover:text-secondry font-bold uppercase"
           >
             Phần mềm
           </a>
           <a
             href="#"
-            className="text-sm/6 font-bold  uppercase hover:text-secondry"
+            className="text-sm/6 hover:text-secondry font-bold uppercase"
           >
             Nạp tải vip
           </a>
           <a
             href="#"
-            className="text-sm/6 font-bold  uppercase hover:text-secondry"
+            className="text-sm/6 hover:text-secondry font-bold uppercase"
           >
             Nhiệm vụ
           </a>
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-bold  uppercase hover:text-secondry">
+            <PopoverButton className="gap-x-1 text-sm/6 hover:text-secondry flex items-center font-bold uppercase">
               Blog +
             </PopoverButton>
 
             <PopoverPanel
               transition
-              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white dark:bg-dark-bg-primary shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="p-4">
                 {blogs.map((item) => (
                   <div
                     key={item.name}
-                    className="group relative flex items-center gap-x-6 rounded-lg px-4 font-semibold text-sm/6 uppercase hover:bg-gray-50"
+                    className="group gap-x-6 text-sm/6 hover:text-secondry relative flex items-center px-4 font-semibold uppercase rounded-lg"
                   >
                     <a href={item.href}>{item.name}</a>
                   </div>
@@ -222,8 +222,8 @@ export default function Nav() {
         className="lg:hidden"
       >
         <div className="fixed inset-0 z-10" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white  sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-end bg-red-700 px-6 py-6">
+        <DialogPanel className="sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white">
+          <div className="flex items-center justify-end px-6 py-6 bg-red-700">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
@@ -233,30 +233,30 @@ export default function Nav() {
               <FontAwesomeIcon icon={faX} className="text-white" />
             </button>
           </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
+          <div className="flow-root mt-6">
+            <div className="divide-gray-500/10 -my-6 divide-y">
               <div className="divide-y">
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-6 py-2 text-base/7 font-semibold uppercase  hover:bg-gray-50"
+                  className="text-base/7 hover:bg-gray-50 block px-6 py-2 -mx-3 font-semibold uppercase rounded-lg"
                 >
                   Game tải nhiều
                 </a>
                 <Disclosure as="div" className="-mx-3">
-                  <div className="flex items-center justify-between px-6 text-base/7 font-semibold  uppercase">
+                  <div className="text-base/7 flex items-center justify-between px-6 font-semibold uppercase">
                     <span>Game</span>
-                    <DisclosureButton className="group flex items-center justify-center py-3 px-10 border-l">
+                    <DisclosureButton className="group flex items-center justify-center px-10 py-3 border-l">
                       +
                     </DisclosureButton>
                   </div>
 
-                  <DisclosurePanel className="divide-y divide-gray-500 bg-black">
+                  <DisclosurePanel className="bg-black divide-y divide-gray-500">
                     {games.map((item) => (
                       <DisclosureButton
                         key={item.name}
                         as="a"
                         href={item.href}
-                        className="block py-2 pl-12 pr-3 text-sm/7 font-semibold text-white capitalize  hover:bg-gray-50"
+                        className="text-sm/7 hover:bg-gray-50 block py-2 pl-12 pr-3 font-semibold text-white capitalize"
                       >
                         {item.name}
                       </DisclosureButton>
@@ -265,43 +265,43 @@ export default function Nav() {
                 </Disclosure>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-6 py-2 text-base/7 font-semibold uppercase  hover:bg-gray-50"
+                  className="text-base/7 hover:bg-gray-50 block px-6 py-2 -mx-3 font-semibold uppercase rounded-lg"
                 >
                   Game việt hóa
                 </a>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-6 py-2 text-base/7 font-semibold uppercase  hover:bg-gray-50"
+                  className="text-base/7 hover:bg-gray-50 block px-6 py-2 -mx-3 font-semibold uppercase rounded-lg"
                 >
                   phần mềm
                 </a>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-6 py-2 text-base/7 font-semibold uppercase  hover:bg-gray-50"
+                  className="text-base/7 hover:bg-gray-50 block px-6 py-2 -mx-3 font-semibold uppercase rounded-lg"
                 >
                   nạp tải vip
                 </a>
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-6 py-2 text-base/7 font-semibold uppercase  hover:bg-gray-50"
+                  className="text-base/7 hover:bg-gray-50 block px-6 py-2 -mx-3 font-semibold uppercase rounded-lg"
                 >
                   nhiệm vụ
                 </a>
                 <Disclosure as="div" className="-mx-3">
-                  <div className="flex items-center justify-between px-6 text-base/7 font-semibold  uppercase">
+                  <div className="text-base/7 flex items-center justify-between px-6 font-semibold uppercase">
                     <span>Blogs</span>
-                    <DisclosureButton className="group flex items-center justify-center py-3 px-10 border-l">
+                    <DisclosureButton className="group flex items-center justify-center px-10 py-3 border-l">
                       +
                     </DisclosureButton>
                   </div>
 
-                  <DisclosurePanel className="divide-y divide-gray-500 bg-black">
+                  <DisclosurePanel className="bg-black divide-y divide-gray-500">
                     {blogs.map((item) => (
                       <DisclosureButton
                         key={item.name}
                         as="a"
                         href={item.href}
-                        className="block py-2 pl-12 pr-3 text-sm/7 font-semibold text-white capitalize  hover:bg-gray-50"
+                        className="text-sm/7 hover:bg-gray-50 block py-2 pl-12 pr-3 font-semibold text-white capitalize"
                       >
                         {item.name}
                       </DisclosureButton>

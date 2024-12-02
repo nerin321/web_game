@@ -7,7 +7,7 @@ interface TrickProps {
 }
 const Trick: React.FC<TrickProps> = ({ img, name, link }) => {
   return (
-    <div className="text-primary">
+    <div className="">
       <div className=" hover-animation group rounded-md">
         <img
           src={img}
