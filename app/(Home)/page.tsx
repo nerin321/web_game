@@ -558,12 +558,12 @@ export default function Home() {
           <p>Xin cảm ơn</p>
           <form
             action=""
-            className="w-full p-5 mt-4 mb-7 border-dashed border rounded-lg flex items-center gap-6 bg-[#fffaca] border-[#ff9800]"
+            className="w-full p-5 mt-4 mb-7 border-dashed border rounded-lg flex items-center gap-6 bg-[#fffaca] border-[#ff9800] dark:bg-dark-bg-primary"
           >
             <input
               type="text"
               placeholder="Nhập mail user làm nv trên Dixgames"
-              className="placeholder:font-bold w-3/5 h-10 pl-4 font-bold border rounded"
+              className="placeholder:font-bold w-3/5 h-10 pl-4 font-bold border rounded bg-white"
             />
             <button className="w-2/5 h-10 font-bold text-white bg-green-600 border rounded">
               Ấn để hiển thị code

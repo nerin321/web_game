@@ -280,7 +280,7 @@ const page = () => {
                 name={filter.id}
                 onChange={handleChange}
                 value={filters[filter.id as keyof Filters]}
-                className="border py-1.5 px-2.5 rounded-md text-sm w-[264px] lg:w-[150px] appearance-none dark:bg-white dark:text-black"
+                className="border py-1.5 px-2.5 rounded-md text-sm w-[264px] lg:w-[150px] appearance-none border-dark-border bg-white dark:text-black"
               >
                 {filter.options.map((option, index) => (
                   <option key={index} value={option} className="">

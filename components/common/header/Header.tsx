@@ -16,11 +16,28 @@ import FlyoutMess from "../flyoutMenu/flyoutMess";
 import { useTheme } from "next-themes";
 
 const Header = () => {
-  const [isLight, setIsLight] = useState(false);
-  const { setTheme } = useTheme();
+  const [isLight, setIsLight] = useState<boolean | null>(null); // Để null để xác định trạng thái chưa được load
+  const [isThemeReady, setIsThemeReady] = useState(false); // Đảm bảo trạng thái đã đồng bộ
+
+  // Lấy trạng thái từ LocalStorage khi tải trang
   useEffect(() => {
-    setTheme(isLight ? "light" : "dark");
-  }, [isLight, setTheme]);
+    const storedTheme = localStorage.getItem("theme") || "light"; // Mặc định là 'light'
+    setIsLight(storedTheme === "light");
+    setIsThemeReady(true); // Đánh dấu trạng thái đã sẵn sàng
+    document.documentElement.className = storedTheme; // Cập nhật className của <html>
+  }, []);
+
+  // Cập nhật theme và LocalStorage khi người dùng chuyển đổi
+  useEffect(() => {
+    if (isLight !== null) {
+      const theme = isLight ? "light" : "dark";
+      document.documentElement.className = theme; // Cập nhật className
+      localStorage.setItem("theme", theme); // Lưu vào LocalStorage
+    }
+  }, [isLight]);
+
+  if (!isThemeReady) return null; // Chờ cho đến khi trạng thái theme được đồng bộ
+
   return (
     <div>
       <div className="lg:flex items-center justify-between">
@@ -36,7 +53,7 @@ const Header = () => {
         <div className="w-full border border-black flex flex-nowrap rounded-md max-w-[415px]">
           <input
             type="text"
-            className="rounded-s-md w-full pl-3 dark:bg-[#262a30]"
+            className="rounded-s-md w-full pl-3 dark:bg-[#262a30] bg-white"
             placeholder="Tìm kiếm game..."
           />
           <button className="size-10 rounded-e-md flex items-center justify-center bg-black">
@@ -49,10 +66,7 @@ const Header = () => {
         <div className="flex items-center gap-6">
           <div className="w-fit flex gap-1 p-1 bg-gray-400 rounded-full">
             <button
-              onClick={() => {
-                setIsLight(true);
-                setTheme("light");
-              }}
+              onClick={() => setIsLight(true)}
               className={`${
                 isLight ? "bg-white text-secondry" : "bg-none text-gray-700"
               } rounded-full flex items-center justify-center p-1`}
@@ -60,10 +74,7 @@ const Header = () => {
               <FontAwesomeIcon icon={faSun} className="size-5 " />
             </button>
             <button
-              onClick={() => {
-                setIsLight(false);
-                setTheme("dark");
-              }}
+              onClick={() => setIsLight(false)}
               className={`${
                 !isLight ? "bg-black text-orange-600" : "bg-none text-gray-700"
               } rounded-full flex items-center justify-center p-1`}
