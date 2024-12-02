@@ -39,7 +39,7 @@ const filterCategory = [
   {
     id: "platform",
     category: "nền tảng",
-    options: ["chọn hệ điều hành", "ưindows", "Mac OS X", "SteamOS + Linux"],
+    options: ["chọn hệ điều hành", "windows", "Mac OS X", "SteamOS + Linux"],
   },
   {
     id: "usage",

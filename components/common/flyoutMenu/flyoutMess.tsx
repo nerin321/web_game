@@ -7,7 +7,7 @@ const items: { name: string; link: string; date: string }[] = [];
 export default function FlyoutMess() {
   return (
     <Popover className="relative">
-      <PopoverButton className="inline-flex items-center justify-center size-10 rounded-full bg-black relative">
+      <PopoverButton className="inline-flex items-center justify-center size-10 rounded-full bg-black relative outline-none">
         <FontAwesomeIcon icon={faCommentDots} className="size-6 text-white" />
         <p className="absolute -top-2 -right-2 size-6 flex items-center justify-center bg-red-600 rounded-full text-white">
           {items.length}
@@ -19,7 +19,9 @@ export default function FlyoutMess() {
       >
         <div className="w-[400px] flex-auto overflow-hidden rounded-s bg-white text-sm/6 border-r-4 border-green-600">
           {items.length === 0 ? (
-            <p className="py-2.5 text-center">Bạn chưa có bình luận nào</p>
+            <p className="py-2.5 text-center text-primary">
+              Bạn chưa có bình luận nào
+            </p>
           ) : (
             <div className="p-3">
               {items.map((item, index) => (

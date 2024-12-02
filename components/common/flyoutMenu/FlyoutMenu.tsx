@@ -38,7 +38,7 @@ const items = [
 export default function FlyoutMenu() {
   return (
     <Popover className="relative">
-      <PopoverButton className="inline-flex items-center justify-center size-10 rounded-full bg-black relative">
+      <PopoverButton className="inline-flex items-center justify-center size-10 rounded-full bg-black relative outline-none">
         <FontAwesomeIcon icon={faBell} className="size-6 text-white" />
         <p className="absolute -top-2 -right-2 size-6 flex items-center justify-center bg-red-600 rounded-full text-white">
           {items.length}
