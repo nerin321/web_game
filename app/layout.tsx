@@ -26,7 +26,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
-          <div className="bottom-5 left-5 fixed flex flex-col gap-1 text-white">
+          <div className="bottom-5 left-5 fixed flex flex-col gap-1 text-white z-20">
             <a href="#" className="py-1.5 px-4 w-fit bg-blue-600 rounded">
               Báo lỗi Nạp VIP
             </a>

@@ -444,8 +444,8 @@ const page = () => {
                 <strong className="text-secondry block py-5 text-center">
                   VIDEO HƯỚNG DẪN CHI TIẾT
                 </strong>
-                <video controls className="w-full">
-                  <source src="/video/videoTest.mp4" type="video/mp4" />
+                <video controls className="w-full" preload="none">
+                  <source src="./video/videoTest.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
