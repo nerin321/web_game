@@ -14,7 +14,7 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 const headerGames = [
   {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR2LtxIuLDmHfP5Hd_ZsUQuyZYXWdAieA3GA&s",
+    img: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/73206bd9-257c-4f50-b1f3-59a306e24084/dfpbdhz-d00fda66-ed12-4514-982d-1f9c31a833f2.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzczMjA2YmQ5LTI1N2MtNGY1MC1iMWYzLTU5YTMwNmUyNDA4NFwvZGZwYmRoei1kMDBmZGE2Ni1lZDEyLTQ1MTQtOTgyZC0xZjljMzFhODMzZjIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.vE-EbKrA-N0BgaM1hcYU39vWphWZhqbDDCgZ5-LchGM",
     name: "returnal",
     link: "#",
   },
@@ -39,7 +39,7 @@ const headerGames = [
     link: "#",
   },
   {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkxsWvwjSNjVwMXTNyNLGW7L0JD5SqlT9imw&s",
+    img: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/aacf7545-f3cd-48d5-b931-28ce4a28db0e/dflmmjz-31743b7a-390e-4eb1-95ed-1505dfb39a70.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2FhY2Y3NTQ1LWYzY2QtNDhkNS1iOTMxLTI4Y2U0YTI4ZGIwZVwvZGZsbW1qei0zMTc0M2I3YS0zOTBlLTRlYjEtOTVlZC0xNTA1ZGZiMzlhNzAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.y2n9j11EhA83whikFrJVCenpZw2abEV4fID8ni4MHWw",
     name: "Hogwarts legacy",
     link: "#",
   },
@@ -414,7 +414,7 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className=" space-y-2 overflow-y-scroll hide-scrollbar h-[560px]">
+          <div className="space-y-2 overflow-y-scroll hide-scrollbar h-[560px]">
             {gameHots.map((item, index) => (
               <div key={index}>
                 {index === 0 ? (
@@ -563,7 +563,7 @@ export default function Home() {
             <input
               type="text"
               placeholder="Nhập mail user làm nv trên Dixgames"
-              className="placeholder:font-bold w-3/5 h-10 pl-4 font-bold border rounded bg-white"
+              className="placeholder:font-bold w-3/5 h-10 pl-4 font-bold border rounded bg-white dark:text-black"
             />
             <button className="w-2/5 h-10 font-bold text-white bg-green-600 border rounded">
               Ấn để hiển thị code

@@ -97,35 +97,35 @@ const Footer = () => {
                 className="flex items-center justify-between py-1.5 hover:text-secondry"
               >
                 <p>game việt hóa</p>
-                <p>`(5.000.000 views - 938 bài)`</p>
+                <p>(5.000.000 views - 938 bài)</p>
               </a>
               <a
                 href=""
                 className="flex items-center justify-between py-1.5 hover:text-secondry"
               >
                 <p>game việt hóa</p>
-                <p>`(5.000.000 views - 938 bài)`</p>
+                <p>(5.000.000 views - 938 bài)</p>
               </a>
               <a
                 href=""
                 className="flex items-center justify-between py-1.5 hover:text-secondry"
               >
                 <p>game việt hóa</p>
-                <p>`(5.000.000 views - 938 bài)`</p>
+                <p>(5.000.000 views - 938 bài)</p>
               </a>
               <a
                 href=""
                 className="flex items-center justify-between py-1.5 hover:text-secondry"
               >
                 <p>game việt hóa</p>
-                <p>`(5.000.000 views - 938 bài)`</p>
+                <p>(5.000.000 views - 938 bài)</p>
               </a>
               <a
                 href=""
                 className="flex items-center justify-between py-1.5 hover:text-secondry"
               >
                 <p>game việt hóa</p>
-                <p>`(5.000.000 views - 938 bài)`</p>
+                <p>(5.000.000 views - 938 bài)</p>
               </a>
             </div>
           </div>

@@ -153,7 +153,7 @@ export default function Nav() {
 
             <PopoverPanel
               transition
-              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white dark:bg-dark-bg-primary shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+              className="absolute -left-8 top-9 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-b-2xl bg-white dark:bg-dark-bg-primary shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="p-4">
                 {games.map((item) => (
@@ -199,13 +199,13 @@ export default function Nav() {
 
             <PopoverPanel
               transition
-              className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white dark:bg-dark-bg-primary shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+              className="absolute -right-8 top-9 z-10 mt-3 w-fit overflow-hidden rounded-b-2xl bg-white dark:bg-dark-bg-primary shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
             >
               <div className="p-4">
                 {blogs.map((item) => (
                   <div
                     key={item.name}
-                    className="group gap-x-6 text-sm/6 hover:text-secondry relative flex items-center px-4 font-semibold uppercase rounded-lg"
+                    className="group gap-x-6 text-sm/6 hover:text-secondry relative flex items-center px-4 font-semibold uppercase rounded-lg text-nowrap"
                   >
                     <a href={item.href}>{item.name}</a>
                   </div>

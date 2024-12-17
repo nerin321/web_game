@@ -395,7 +395,7 @@ export default function Page() {
               className="relative flex items-center justify-between mb-6"
               id="span"
             >
-              <div className="text-secondry dark:bg-gray-900 px-5 ml-5 font-bold text-center bg-gray-200">
+              <div className="text-secondry dark:bg-gray-900x px-5 ml-5 font-bold text-center bg-gray-200">
                 <FontAwesomeIcon icon={faQuoteLeft} className="size-10" />
               </div>
             </div>

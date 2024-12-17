@@ -53,7 +53,7 @@ const Header = () => {
         <div className="w-full border border-black flex flex-nowrap rounded-md max-w-[415px]">
           <input
             type="text"
-            className="rounded-s-md w-full pl-3 dark:bg-[#262a30] bg-white"
+            className="rounded-s-md w-full pl-3 dark:bg-[#262a30] bg-white outline-none"
             placeholder="Tìm kiếm game..."
           />
           <button className="size-10 rounded-e-md flex items-center justify-center bg-black">

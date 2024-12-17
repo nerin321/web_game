@@ -4,7 +4,6 @@ import NewComment from "@/components/common/comment/NewComment";
 import GameUpdate from "@/components/home/gameNewRight/GameUpdate";
 import {
   faAnglesRight,
-  faArrowRight,
   faBars,
   faGem,
   faQuoteLeft,
